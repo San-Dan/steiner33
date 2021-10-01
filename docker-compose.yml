@@ -15,11 +15,12 @@ services:
       - wp
   wordpress:
     ports:
-    - '${PORT:-8000}:80'
+    - '${PORT}:80'
+    - '8000:80'
     depends_on: 
       - db
     image: wordpress:latest
-    volumes: ["./html:/var/www/html"]
+    volumes: ["./html:/var/www/html", './upload.ini:/usr/local/etc/php/conf.d/uploads.ini']
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress

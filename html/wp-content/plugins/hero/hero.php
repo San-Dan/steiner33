@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Hero
- * Description:       Example block written with ESNext standard and JSX support – build step required.
+ * Description:       Hero block with background image and school's name
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0

@@ -11,6 +11,7 @@
  * Text Domain:       hero
  *
  * @package           create-block
+ * blablablabla
  */
 
 /**

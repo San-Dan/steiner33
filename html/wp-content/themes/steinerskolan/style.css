@@ -1,0 +1,66 @@
+/*
+Theme Name: Steiner Skola theme
+Theme URI:
+Author: Aseel, Gilda, Sandra
+Author URI:
+Description: A new layout to Steiner skola's website.
+Version: 1.0
+*/
+
+body{
+    background-color: white;
+}
+/* Footer */
+footer{
+    position: fixed;
+    display:flex;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    color: white;
+    height: 250px;
+}
+div.vertical{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgb(84, 134, 146);
+}
+.first{
+    background-color: rgb(66, 97, 105);
+    height: 125px;
+    display:flex;
+    align-items: center;   
+}
+ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;    
+    width: 100%;
+}
+div.horizontal{
+    width: 50%;
+    background-color: rgb(114, 147, 155);
+}
+p {
+    font-size: 14px;
+    text-align: center;
+}
+.second {
+    height: 125px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (min-width: 600px) {
+    footer, p {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    footer, p {
+        font-size: 18px;
+    }
+    
+}

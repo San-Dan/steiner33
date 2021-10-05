@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Hero
  * Description:       Hero block with background image and school's name
@@ -11,6 +12,7 @@
  * Text Domain:       hero
  *
  * @package           create-block
+ * blablablabla
  */
 
 /**
@@ -20,7 +22,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function create_block_hero_block_init() {
-	register_block_type( __DIR__ );
+function create_block_hero_block_init()
+{
+	register_block_type(__DIR__);
 }
-add_action( 'init', 'create_block_hero_block_init' );
+add_action('init', 'create_block_hero_block_init');

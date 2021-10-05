@@ -15,7 +15,25 @@
 
     </div>
     <div class="horizontal">
-        <p>Kontakt uppgifter: </p>
+        <div class="contact">
+            <h2>Kontaka oss: </h2>
+            <div class="adress">
+                <p>Tallhöjdsgatan 1
+                    <br>416 74 GÖTEBORG
+                </p>
+            </div>
+            <div class="phone">
+                <p>Expedition: 031-21 46 32
+                    <br>Vaktmästare: 0705-11 50 98
+                </p>
+            </div>
+            <div class="email">
+                <p>rudolf@steinerskolan.se</p>
+            </div>
+        </div>
+        <div class="links">
+            <p>Write the links here</p>
+        </div>
     </div>
 </footer>
 </div><!-- #page -->

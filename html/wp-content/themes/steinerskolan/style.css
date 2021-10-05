@@ -18,7 +18,7 @@ footer{
     width: 100%;
     left: 0;
     color: white;
-    height: 250px;
+    height: 220px;
 }
 div.vertical{
     display:flex;
@@ -28,7 +28,7 @@ div.vertical{
 }
 .first{
     background-color: rgb(66, 97, 105);
-    height: 125px;
+    height: 110px;
     display:flex;
     align-items: center;   
 }
@@ -38,29 +38,52 @@ ul{
     justify-content: space-around;    
     width: 100%;
 }
-div.horizontal{
-    width: 50%;
-    background-color: rgb(114, 147, 155);
-}
-p {
-    font-size: 14px;
-    text-align: center;
-}
 .second {
-    height: 125px;
+    height: 110px;
     width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
 }
+div.horizontal{
+    width: 50%;
+    background-color: rgb(114, 147, 155);
+    display: flex;
+    flex-direction: row;
+    /* padding: 5px; */
+}
+div.contact ,
+div.links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding-left: 5px;
+}
+p {
+    font-size: 14px;    
+}
 @media screen and (min-width: 600px) {
-    footer, p {
+    footer, 
+    p{
         font-size: 16px;
+    }
+    i.fab {
+        font-size: 22px;
+    }
+    .kontakt{
+        font-size: 18px;
     }
 }
 @media screen and (min-width: 1000px) {
-    footer, p {
+    footer, 
+    p{
         font-size: 18px;
     }
-    
+    i.fab {
+        font-size: 24px;
+    }
+    .kontakt{
+        font-size: 20px;
+    }
 }

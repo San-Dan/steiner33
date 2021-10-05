@@ -1,9 +1,7 @@
-<?php 
+<?php get_header(); ?>
 
-get_header(); ?>
+<div class="body-stuff">
 
-<!-- The whole page -->
-
-<p></p>
+</div>
 
 <?php get_footer(); ?>

@@ -32,11 +32,12 @@ div.vertical{
     display:flex;
     align-items: center;   
 }
-ul{
+ul.socialMedia{
     list-style: none;
     display:flex;
     justify-content: space-around;    
     width: 100%;
+    padding: 0;
 }
 .second {
     height: 110px;
@@ -50,30 +51,44 @@ div.horizontal{
     background-color: rgb(114, 147, 155);
     display: flex;
     flex-direction: row;
-    /* padding: 5px; */
+    padding: 0;
+}
+h2{
+  font-size: 14px;
+  margin-bottom: 0px;
+  font-weight: bold;
 }
 div.contact ,
 div.links{
+    /* margin: 0px; */
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
     padding-left: 5px;
+    padding-top: 0;
 }
 p {
-    font-size: 14px;    
+    font-size: 11px;  
+    margin-bottom: 10px;
 }
 @media screen and (min-width: 600px) {
     footer, 
-    p{
+    p{      
         font-size: 16px;
     }
-    i.fab {
+    i.fab,
+    h2 {
         font-size: 22px;
     }
-    .kontakt{
-        font-size: 18px;
+    div.contact ,
+    div.links {
+    margin-left: 10px;
     }
+
+    /* .kontakt{
+        font-size: 18px;
+    } */
 }
 @media screen and (min-width: 1000px) {
     footer, 
@@ -83,9 +98,13 @@ p {
     i.fab {
         font-size: 24px;
     }
-    .kontakt{
-        font-size: 20px;
+    div.contact ,
+    div.links {
+    margin-left: 10px;
     }
+    /* .kontakt{
+        font-size: 20px;
+    } */
 }
 header {
     padding: 1rem;

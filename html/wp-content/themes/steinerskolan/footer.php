@@ -3,7 +3,7 @@
 <footer class="footer ">
     <div class="vertical">
         <div class="first">
-            <ul>
+            <ul class="socialMedia">
                 <li><a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></i></a></li>
                 <li><a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
@@ -16,15 +16,15 @@
     </div>
     <div class="horizontal">
         <div class="contact">
-            <h2>Kontaka oss: </h2>
+            <h2>Kontakt</h2>
             <div class="adress">
                 <p>Tallhöjdsgatan 1
                     <br>416 74 GÖTEBORG
                 </p>
             </div>
             <div class="phone">
-                <p>Expedition: 031-21 46 32
-                    <br>Vaktmästare: 0705-11 50 98
+                <p>Expedition:<br>031-21 46 32
+                    <br>Vaktmästare:<br>0705-11 50 98
                 </p>
             </div>
             <div class="email">

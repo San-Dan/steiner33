@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="links">
-            <p>Links</p>
+            <p> important Links</p>
         </div>
     </div>
 </footer>

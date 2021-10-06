@@ -2,26 +2,48 @@
 
 declare(strict_types=1);
 
-// function get_menu(string $location): Collection
-// {
-//     $menu = [];
-//     $items = wp_get_nav_menu_items($location) ?: [];
+add_action('after_setup_theme', function () {
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
+    add_theme_support('menus');
+    add_theme_support('automatic-feed-links');
 
-//     foreach ($items as $item) {
-//         $parentId = (int) $item->menu_item_parent;
+    add_theme_support('widgets');
 
-//         if ($parentId === 0) {
-//             $item->children = [];
-//             $menu[$item->ID] = $item;
+    // Add support for editor styles.
+    add_theme_support('editor-styles');
 
-//             continue;
-//         }
+    add_theme_support(
+        'custom-logo',
+        array(
+            'height'      => 150,
+            'width'       => 300,
+            'flex-width'  => true,
+            'flex-height' => true,
+        )
+    );
+});
 
-//         $menu[$parentId]->children[] = $item;
-//     }
+ function get_menu(string $location)
+ {
+     $menu = [];
+     $items = wp_get_nav_menu_items($location) ?: [];
 
-//     return $menu;
-// }
+    foreach ($items as $item) {
+         $parentId = (int) $item->menu_item_parent;
+
+       if ($parentId === 0) {
+            $item->children = [];
+            $menu[$item->ID] = $item;
+
+            continue;
+        }
+
+        $menu[$parentId]->children[] = $item;
+    }
+
+    return $menu;
+}
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_stylesheet_uri());

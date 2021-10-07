@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<div class="body-stuff">
+<!-- The whole pagr -->
 
-</div>
 
 <?php get_footer(); ?>

@@ -7,105 +7,11 @@ Description: A new layout to Steiner skola's website.
 Version: 1.0
 */
 
-body{
+body {
     background-color: white;
 }
-/* Footer */
-footer{
-    position: fixed;
-    display:flex;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    color: white;
-    height: 220px;
-}
-div.vertical{
-    display:flex;
-    flex-direction: column;
-    width: 50%;
-    background-color: rgb(84, 134, 146);
-}
-.first{
-    background-color: rgb(66, 97, 105);
-    height: 110px;
-    display:flex;
-    align-items: center;   
-}
-ul.socialMedia{
-    list-style: none;
-    display:flex;
-    justify-content: space-around;    
-    width: 100%;
-    padding: 0;
-}
-.second {
-    height: 110px;
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-div.horizontal{
-    width: 50%;
-    background-color: rgb(114, 147, 155);
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-}
-h2{
-  font-size: 14px;
-  margin-bottom: 0px;
-  font-weight: bold;
-}
-div.contact ,
-div.links{
-    /* margin: 0px; */
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-    padding-left: 5px;
-    padding-top: 0;
-}
-p {
-    font-size: 11px;  
-    margin-bottom: 10px;
-}
-@media screen and (min-width: 600px) {
-    footer, 
-    p{      
-        font-size: 16px;
-    }
-    i.fab,
-    h2 {
-        font-size: 22px;
-    }
-    div.contact ,
-    div.links {
-    margin-left: 10px;
-    }
 
-    /* .kontakt{
-        font-size: 18px;
-    } */
-}
-@media screen and (min-width: 1000px) {
-    footer, 
-    p{
-        font-size: 18px;
-    }
-    i.fab {
-        font-size: 24px;
-    }
-    div.contact ,
-    div.links {
-    margin-left: 10px;
-    }
-    /* .kontakt{
-        font-size: 20px;
-    } */
-}
+/* Header - Nav */
 header {
     padding: 1rem;
     display: flex;
@@ -114,10 +20,9 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-  }
-  
+}
 
-  .ham {
+.ham {
     position: absolute;
     z-index: 1;
     right: 1rem;
@@ -128,22 +33,26 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .open-menu {
+}
+
+a {
+    text-decoration: none;
+}
+
+.open-menu {
     display: flex;
-  }
-  .hide-open {
+}
+.hide-open {
     display: none;
-  }
-  .close-menu {
+}
+.close-menu {
     display: none;
-  }
-  .show-close {
+}
+.show-close {
     display: flex;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     list-style: none;
     text-decoration: none;
     text-transform: uppercase;
@@ -154,60 +63,134 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  
-  header nav ul li {
+}
+
+header nav ul li {
     padding: 0 2rem;
-  }
-  
-  @media (min-width: 1000px) {
+}
+
+@media (min-width: 1000px) {
     .ham {
-      display: none;
+        display: none;
     }
-  
+
     header {
-      justify-content: space-around;
+        justify-content: space-around;
     }
-  }
-  
-  @media (max-width: 1000px) {
+}
+
+@media (max-width: 1000px) {
     .navbar {
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      position: absolute;
-      overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
     }
-  
+
     /*.show-nav {
-      
-    }*/
-  
+    
+  }*/
+
     .navbar-nav {
-      height: 100%;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-  
+
     header nav ul li {
-      padding: 1rem 1rem;
+        padding: 1rem 1rem;
     }
-  }
-  
-  .active {
-    color: red;
-  }
-  
-  .navbar-brand {
+}
+
+.navbar-brand {
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
     text-transform: uppercase;
     color: black;
-  }
+}
+
+/**** Footer ****/
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    color: white;
+    height: 220px;
+}
+div.vertical {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgb(84, 134, 146);
+}
+.first {
+    background-color: rgb(66, 97, 105);
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.second {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.horizontal {
+    width: 50%;
+    background-color: rgb(114, 147, 155);
+    display: flex;
+    flex-direction: row;
+    /* padding: 5px; */
+}
+div.contact,
+div.links {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding-left: 5px;
+}
+p {
+    font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+    footer,
+    p {
+        font-size: 16px;
+    }
+    i.fab {
+        font-size: 22px;
+    }
+    .kontakt {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    footer,
+    p {
+        font-size: 18px;
+    }
+    i.fab {
+        font-size: 24px;
+    }
+    .kontakt {
+        font-size: 20px;
+    }
+}

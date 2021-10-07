@@ -1,8 +1,7 @@
 <?php
-
 /**
  * Plugin Name:       Hero
- * Description:       Hero block with background image and school's name
+ * Description:       Example block written with ESNext standard and JSX support – build step required.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -12,9 +11,6 @@
  * Text Domain:       hero
  *
  * @package           create-block
- * blablablabla
- * 
- * blöblöblöblö
  */
 
 /**
@@ -24,8 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function create_block_hero_block_init()
-{
-	register_block_type(__DIR__);
+function create_block_hero_block_init() {
+	register_block_type( __DIR__ );
 }
-add_action('init', 'create_block_hero_block_init');
+add_action( 'init', 'create_block_hero_block_init' );

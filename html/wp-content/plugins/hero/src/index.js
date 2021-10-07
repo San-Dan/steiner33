@@ -40,7 +40,7 @@ registerBlockType("create-block/hero", {
 
 		url: {
 			type: "string",
-			default: "Läs mer om oss",
+			default: "",
 		},
 
 		text: {

@@ -47,5 +47,6 @@ add_action('after_setup_theme', function () {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('header', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('header', get_template_directory_uri() . '/style.css', true, '1.1', 'all');
+    wp_enqueue_script('hamburger', get_template_directory_uri() . '/main.js', '', '', true);
 });

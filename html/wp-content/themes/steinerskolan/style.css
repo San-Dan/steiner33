@@ -1,123 +1,92 @@
-/*
-Theme Name: Steiner Skola theme
-Theme URI:
-Author: Aseel, Gilda, Sandra
-Author URI:
-Description: A new layout to Steiner skola's website.
-Version: 1.0
-*/
-
-body{
-    background-color: white;
-}
-
-/* Header - Nav */
+ /*Properties for Nav-bar*/  
+ *{  
+  margin:0;    
+ }  
+ 
+/*** HEADER ***/
 header {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: sticky;
-    top: 0;
-    width: 100%;
-  }
-  
-  .ham {
-    position: absolute;
-    z-index: 1;
-    right: 1rem;
-    width: 40px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-a {
+  background:grey; 
+  display:flex;  
+  top:0;  
+  height:10vh;  
+  justify-content:space-between;  
+  align-items:center;   
+  padding:0px 20px;   
+  z-index: 2;
+}
+ 
+.navbar-nav {
+  margin-right: 50px;
+  text-transform: uppercase;
   text-decoration: none;
+  font-size: larger;
+}
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-  .open-menu {
-    display: flex;
-  }
-  .hide-open {
-    display: none;
-  }
-  .close-menu {
-    display: none;
-  }
-  .show-close {
-    display: flex;
-  }
-  
-  header nav ul {
-    list-style: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header nav ul li {
-    padding: 0 2rem;
-  }
-  
-  @media (min-width: 1000px) {
-    .ham {
-      display: none;
-    }
-  
-    header {
-      justify-content: space-around;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    .navbar {
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
+ .navbar{  
+  display:flex;  
+  justify-content:space-between;  
+ }  
+ .list-item {  
+  padding:10px;  
+  list-style:none;  
+ }  
+ .nav-link{  
+  color:inherit;  
+  text-decoration:none;  
+ }  
+
+  /*Properties for Hamburger*/  
+  .ham{  
+    display:none;  
+    padding:5px;  
+    cursor:pointer;  
+   }  
+   .bar1,.bar2,.bar3{  
+    display:block;  
+    width:35px;  
+    height:3px;  
+    margin:5px auto;  
+    background-color:#101010;  
+    transition: 0.4s;  
+   } 
+/*** MENU + HAMBURHER MENU ***/
+   @media only screen and (max-width:768px){  
+    *{  
+      overflow:hidden;  
+     }  
+    .navbar{  
+      position:absolute;   
+      top:10vh;  
+      right:0px;  
+      flex-direction:column;  
+      background-color: pink;    
+      transition:transform 0.3s ease-in;  
+      transform:translate(100%);
+      width: 50%; 
+     }  
+    .nav-change{  
+      transform:translate(0%);  
+     }  
+    .ham{  
+      display:block;  
       position: absolute;
-      overflow: hidden;
-    }
-  
-    /*.show-nav {
-      
-    }*/
-  
-    .navbar-nav {
-      height: 100%;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    header nav ul li {
-      padding: 1rem 1rem;
-    }
-  }
-  
-  .navbar-brand {
-    text-decoration: none;
-    font-size: larger;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-  }
-
-
+      z-index: 1;
+      right: 0;
+      margin-right: 16px;
+     }  
+    .change .bar1 {  
+     transform: rotate(45deg) translate(8px,3px);  
+    }  
+    .change .bar2 {  
+     opacity: 0;  
+    }  
+    .change .bar3 {  
+     transform: rotate(-45deg) translate(8px,-3px);  
+    }  
+    }  
 
 
 /**** Footer ****/

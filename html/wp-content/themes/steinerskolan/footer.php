@@ -115,11 +115,11 @@
         </svg>
     </div>
     <div class="links">
-        <ul>
-            <li><a href="https://www.instagram.com/rudolfsteinerskolangoteborg/">Instagram</a></li>
-            <li><a href="http://www.facebook.com/rudolfsteinerskolanigoteborg">Facebook</a></li>
-            <li><a href="https://www.waldorfportalen.se/">Waldorfportalen</a></li>
-            <li><a href="https://www.steinerskolan.se/lankar-till-mer-information/">Länkar</a></li>
+        <ul class="links">
+            <li class="link"><a href="https://www.instagram.com/rudolfsteinerskolangoteborg/">Instagram</a></li>
+            <li class="link"><a href="http://www.facebook.com/rudolfsteinerskolanigoteborg">Facebook</a></li>
+            <li class="link"><a href="https://www.waldorfportalen.se/">Waldorfportalen</a></li>
+            <li class="link"><a href="https://www.steinerskolan.se/lankar-till-mer-information/">Länkar</a></li>
         </ul>
     </div>
     <div class="contact">
@@ -142,5 +142,3 @@
 
 <?php wp_footer(); ?>
 </body>
-
-</html>

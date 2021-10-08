@@ -5,7 +5,7 @@
 	"title": "Hero",
 	"category": "layout",
 	"icon": "cover-image",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"description": "Hero Block",
 	"supports": {
 		"html": false
 	},

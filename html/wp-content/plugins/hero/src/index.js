@@ -1,22 +1,29 @@
-import { registerBlockType } from "@wordpress/blocks";
-import {
+const { registerBlockType } = wp.blocks;
+const {
 	InspectorControls,
 	RichText,
 	MediaUpload,
 	MediaUploadCheck,
 	useBlockProps,
-} from "@wordpress/block-editor";
+	BlockControls,
+	AlignmentToolbar,
+} = wp.blockEditor;
 
-import { PanelBody, Button } from "@wordpress/components";
+const { PanelBody, Button } = wp.components;
 const { Fragment } = wp.element;
 
 import "./style.scss";
 import "./editor.scss";
 
 // import Edit from "./edit";
-import save from "./save";
+// import save from "./save";
 
 registerBlockType("create-block/hero", {
+	title: "Hero",
+	description: "Hero block",
+	icon: "cover-image",
+	category: "layout",
+
 	attributes: {
 		coverImageId: {
 			type: "number",
@@ -38,9 +45,14 @@ registerBlockType("create-block/hero", {
 			default: "",
 		},
 
-		url: {
+		urlLink: {
 			type: "string",
 			default: "",
+		},
+
+		urlName: {
+			type: "string",
+			default: "Läs mer om oss",
 		},
 
 		text: {
@@ -56,16 +68,20 @@ registerBlockType("create-block/hero", {
 			contentImageUrl,
 			coverImageId,
 			contentImageId,
-			url,
+			urlLink,
+			urlName,
 			text,
 		} = attributes;
 
 		// Functions
 		const setCoverImage = (media) => {
-			setAttributes({ coverImageId: media.id, coverImageUrl: media.url });
+			setAttributes({ coverImageId: media.id }, { coverImageUrl: media.url });
 		};
 		const setContentImage = (media) => {
-			setAttributes({ contentImageId: media.id, contentImageUrl: media.url });
+			setAttributes(
+				{ contentImageId: media.id },
+				{ contentImageUrl: media.url }
+			);
 		};
 
 		// skillnad med media??
@@ -76,8 +92,12 @@ registerBlockType("create-block/hero", {
 		//     });
 		// };
 
-		const setURL = (value) => {
-			setAttributes({ URL: value });
+		const setUrlLink = (value) => {
+			setAttributes({ urlLink: value });
+		};
+
+		const setUrlName = (value) => {
+			setAttributes({ urlName: value });
 		};
 
 		const setText = (value) => {
@@ -85,64 +105,71 @@ registerBlockType("create-block/hero", {
 		};
 
 		return [
-			<Fragment>
-				<InspectorControls>
-					<PanelBody title="Select background cover image">
-						<MediaUploadCheck>
-							<MediaUpload
-								onSelect={setCoverImage}
-								type="image"
-								value={mediaID}
-								render={({ open }) => (
-									<Button
-										className={mediaID ? "image-button" : "button button-large"}
-										onClick={open}
-									>
-										{!mediaID ? __("Upload Image") : <img src={mediaURL} />}
-									</Button>
-								)}
-							/>
-
-							<MediaUpload
-								onSelect={setContentImage}
-								type="image"
-								value={mediaID}
-								render={({ open }) => (
-									<Button
-										className={mediaID ? "image-button" : "button button-large"}
-										onClick={open}
-									>
-										{!mediaID ? __("Upload Image") : <img src={mediaURL} />}
-									</Button>
-								)}
-							/>
-						</MediaUploadCheck>
-					</PanelBody>
-				</InspectorControls>
-				,
-				<div className="text-section">
-					<input
-						className="text-input"
-						onChange={setText}
-						defaultValue={attributes.text}
-					/>
-					<input
-						className="url-input"
-						onChange={setURL}
-						defaultValue={attributes.url}
-					/>
-				</div>
-			</Fragment>,
+			<InspectorControls>
+				<PanelBody title="Select images">
+					<p>
+						<strong>Select background cover image</strong>
+					</p>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={setCoverImage}
+							type="image"
+							value={coverImageId}
+							render={({ open }) => (
+								<Button
+									className={
+										coverImageId ? "image-button" : "button button-large"
+									}
+									onClick={open}
+								>
+									Choose bottom image
+								</Button>
+							)}
+						/>
+						<p>
+							<strong>Select content image</strong>
+						</p>
+						<MediaUpload
+							onSelect={setContentImage}
+							type="image"
+							value={contentImageId}
+							render={({ open }) => (
+								<Button
+									className={
+										contentImageId ? "image-button" : "button button-large"
+									}
+									onClick={open}
+								>
+									Choose top image
+								</Button>
+							)}
+						/>
+					</MediaUploadCheck>
+				</PanelBody>
+			</InspectorControls>,
+			<div className="text-section">
+				<input className="text-input" onChange={setText} defaultValue={text} />
+				<input
+					className="url-input"
+					onChange={setUrlLink}
+					defaultValue={urlLink}
+				/>
+				<input
+					className="url-input"
+					onChange={setUrlName}
+					defaultValue={urlName}
+				/>
+			</div>,
 		];
 	},
 
 	save: ({ attributes }) => {
 		const { coverImageUrl, contentImageUrl } = attributes;
-		return [
+		return (
 			<div className="hero-images">
 				<img src={coverImageUrl} className="cover-image" />
 				<img src={contentImageUrl} className="content-image" />
-			</div>,
-		];
+			</div>
+		);
 	},
 });

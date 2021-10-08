@@ -94,23 +94,14 @@ footer.footer{
     position: fixed;
     display:flex;
     flex-direction: column;
-    align-items: center; 
-    /* justify-content: flex-start; */
+    align-items: center;   
     bottom: 0;
     width: 100%;
-    left: 0;
-    /* color: white; */
+    left: 0;    
     max-height: 530px;
-    /* background-color: rgb(194, 186, 186); */
-    /* padding-top: 32px; */
     padding-bottom: 20px;
 
  }
- /* .footerLogo,
- .links,
- .contact{
-    width: 60%;
- } */
 .footerLogo{
    width: 200px;
    height: 96px;
@@ -126,40 +117,26 @@ footer.footer{
   align-items: center;
   padding: 8px 16px;
   list-style: none;
-
-  /* position: static; */
   width: 206px;
   height: 184px;
-  /* left: 8px;
-  top: 128px; */
-
   flex: none;
   order: 1;
   flex-grow: 0;
   margin-top: 0px;
 }
-li a{
-  /* position: static; */
+li a{ 
   width: 99px;
   height: 24px;
   left: 53.5px;
   top: 56px;
-
-  /* Links */
   font-family: 'Calluna';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-
-  /* identical to box height, or 100% */
   text-align: center;
   text-decoration-line: underline;
-
-  /* Black */
   color: #00332C;
-
-  /* Inside Auto Layout */
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -171,38 +148,68 @@ li a{
   justify-content: center;
   align-items: center;
   padding: 0px 16px;
-
   position: static;
   width: 222px;
   height: 112px;
   left: 0px;
   top: 344px;
   color: #00332C;
-
   font-family: 'Chillax';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
-  text-align: center;
-  
-  /* Inside Auto Layout */
+  text-align: center;  
   flex: none;
   order: 2;
-  flex-grow: 0;
-  /* margin: 32px 0px; */
+  flex-grow: 0;  
 }
 .adress p,
 .phone p,
 .email p{
   margin: 0px;
 }
-
-@media screen and (min-width: 600px) {
-   
-   
-}
 @media screen and (min-width: 1000px) {
- 
+  footer.footer{   
+    flex-direction: row;
+    height: 360px;
+    padding-bottom: 0;   
+  }
+  .footerLogo{
+    width: 500px;
+    height: 264px;
+    margin-right: -50px;
+
+  }
+  .links{
+    width: 363px;
+    height: 200px;
+    position: absolute;
+    right: 0;    
+  }
+  li a {   
+    width: 218px;
+    height: 48px;
+    left: 8px;
+    top: 8px; 
+    font-size: 48px;
+    line-height: 63px;
+    letter-spacing: 0.01em;
+  }
+  a{
+    text-align: start;
+  }
+  .contact{
+    width: 650px;
+    height: 200px;
+    font-size: 32px;
+    line-height: 64px;
+    letter-spacing: 0.02em;   
+  }
+  .adress p,
+  .phone p,
+  .email p{
+    text-align: start;
+  }
 }

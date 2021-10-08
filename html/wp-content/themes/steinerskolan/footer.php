@@ -116,10 +116,10 @@
     </div>
     <div class="links">
         <ul>
-            <li><a href="http://www.instagram.com">Instagram</a></li>
-            <li><a href="http://www.facebook.com">Facebook</a></li>
-            <li><a href="#">Waldorprotalen</a></li>
-            <li><a href="#">Länkar</a></li>
+            <li><a href="https://www.instagram.com/rudolfsteinerskolangoteborg/">Instagram</a></li>
+            <li><a href="http://www.facebook.com/rudolfsteinerskolanigoteborg">Facebook</a></li>
+            <li><a href="https://www.waldorfportalen.se/">Waldorfportalen</a></li>
+            <li><a href="https://www.steinerskolan.se/lankar-till-mer-information/">Länkar</a></li>
         </ul>
     </div>
     <div class="contact">

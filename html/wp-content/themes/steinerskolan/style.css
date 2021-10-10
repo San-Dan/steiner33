@@ -1,9 +1,9 @@
 /* Theme Color Scheme*/
 :root {
     --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
-    --white-bg-color: #f2f7f5;
+    --white-bg-color: #f2f7f5; /* text på grön bakgrund och bg på Vår Värdegrund, footer mm*/
     --black: #00332c;
-    --white-text: #fffffe;
+    --white-text: #fffffe; /* bara alumni info-kort? */
     --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
     --yellow-btn-pressed: #fcd38c;
 }
@@ -29,34 +29,41 @@
 
 * {
     margin: 0;
+    
+}
+
+body {
+    background-color: var(--green-primary);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 @font-face {
-  font-family: 'Calluna';
-  src: url('assets/fonts/Calluna-Regular.woff2') format('woff2'),
-      url('assets/fonts/Calluna-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Calluna";
+    src: url("assets/fonts/Calluna-Regular.woff2") format("woff2"),
+        url("assets/fonts/Calluna-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Chillax';
-  src: url('assets/fonts/Chillax-Regular.woff2') format('woff2'),
-      url('assets/fonts/Chillax-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Chillax";
+    src: url("assets/fonts/Chillax-Regular.woff2") format("woff2"),
+        url("assets/fonts/Chillax-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
- /*Properties for Nav-bar*/  
- *{  
-  margin:0;    
- }  
- 
+/*Properties for Nav-bar*/
+* {
+    margin: 0;
+}
+
 /*** HEADER ***/
 header {
-    background: grey;
+    background: var(--white-bg-color);
     display: flex;
     top: 0;
     height: 10vh;
@@ -143,78 +150,79 @@ header {
 
 /**** Footer ****/
 footer.footer {
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     left: 0;
     max-height: 530px;
     padding-bottom: 20px;
- }
-.footerLogo{
-   width: 200px;
-   height: 96px;
+    background-color: var(--white-bg-color);
 }
-.footerLogo svg{
-  width: 100%;
-  height: 100%;
+.footerLogo {
+    width: 200px;
+    height: 96px;
 }
-div.links ul.links{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8px 16px;
-  list-style: none;
-  width: 206px;
-  height: 184px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-top: 0px;
+.footerLogo svg {
+    width: 100%;
+    height: 100%;
 }
-li.link a{ 
-  width: 99px;
-  height: 24px;
-  left: 53.5px;
-  top: 56px;
-  font-family: 'Calluna';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
-  text-decoration-line: underline;
-  color: #00332C;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-bottom: 24px;
+div.links ul.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 16px;
+    list-style: none;
+    width: 206px;
+    height: 184px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 0px;
 }
-.contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 16px;
-  position: static;
-  width: 222px;
-  height: 112px;
-  left: 0px;
-  top: 344px;
-  color: #00332C;
-  font-family: 'Chillax';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: center;  
-  flex: none;
-  order: 2;
-  flex-grow: 0;  
+li.link a {
+    width: 99px;
+    height: 24px;
+    left: 53.5px;
+    top: 56px;
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: var(--green-primary); /*#00332C;*/
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 24px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    position: static;
+    width: 222px;
+    height: 112px;
+    left: 0px;
+    top: 344px;
+    color: var(--green-primary); /*#00332C;*/
+    font-family: "Chillax";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
 }
 .adress p,
 .phone p,
@@ -222,59 +230,58 @@ li.link a{
     margin: 0px;
 }
 @media screen and (min-width: 1000px) {
-  footer.footer{   
-    flex-direction: row;
-    height: 360px;
-    padding-bottom: 0; 
-    padding-left: 32px;
-    /* padding-right: 32px;     */
-  }
-  .footerLogo{
-    width: 462px;
-    height: 264px;
-    margin-right: 125px;
-  }
-  div.links{
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    right: 0;
-    align-items: start;
-    margin-right: -50px;    
-  }
-  ul.links{
-    width: 360px;
-    padding-left: 0;  
-    padding-right: 0; 
-    text-align: left;
-   
-  }
-  li.link{
-    width: 360px;
-  }
-  li.link a {   
-    width: 360px;
-    height: 48px;    
-    top: 8px; 
-    font-size: 48px;
-    line-height: 63px;
-    letter-spacing: 0.01em;
-    text-align: start;
-  } 
-  .contact{
-    width: 450px;
-    height: 200px;
-    font-size: 32px;
-    line-height: 64px;
-    letter-spacing: 0.02em;  
-    align-items: start;
-    text-align: left; 
-  }
-  .adress p,
-  .phone p,
-  .email p{   
-    text-align: start;
-    align-items: start;
-    text-align: left;
-  }
+    footer.footer {
+        flex-direction: row;
+        height: 360px;
+        padding-bottom: 0;
+        padding-left: 32px;
+        /* padding-right: 32px;     */
+    }
+    .footerLogo {
+        min-width: 400px;
+        height: 264px;
+        margin-right: 125px;
+    }
+    div.links {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        align-items: start;
+        margin-right: -50px;
+    }
+    ul.links {
+        width: 360px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+    li.link {
+        width: 360px;
+    }
+    li.link a {
+        width: 360px;
+        height: 48px;
+        top: 8px;
+        font-size: 40px;
+        line-height: 63px;
+        letter-spacing: 0.01em;
+        text-align: start;
+    }
+    .contact {
+        width: 450px;
+        height: 200px;
+        font-size: 32px;
+        line-height: 64px;
+        letter-spacing: 0.02em;
+        align-items: start;
+        text-align: left;
+    }
+    .adress p,
+    .phone p,
+    .email p {
+        text-align: start;
+        align-items: start;
+        text-align: left;
+    }
 }

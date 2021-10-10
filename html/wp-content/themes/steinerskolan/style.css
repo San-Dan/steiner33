@@ -1,215 +1,242 @@
- /*Properties for Nav-bar*/  
- *{  
-  margin:0;    
- }  
- 
+/*Properties for Nav-bar*/
+:root {
+    --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
+    --white-bg-color: #f2f7f5;
+    --black: #00332c;
+    --white-text: #fffffe;
+    --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
+    --yellow-btn-pressed: #fcd38c;
+}
+
+/*
+  Using color variables, example: 
+    .one {
+      color: white;
+      background-color: var(--green-primary);
+    }
+
+
+    Menyns färger:
+    - Länkar default: green bg color 80% , Hover/Klick och underkategorier: 100% 
+
+    Buttons
+    - Background default: yellow btn bg
+    - Pressed: --yellow-btn-pressed
+    - Text: green-primary
+
+    Lägga green-primary som bodys background color??
+*/
+
+* {
+    margin: 0;
+}
+
 /*** HEADER ***/
 header {
-  background:grey; 
-  display:flex;  
-  top:0;  
-  height:10vh;  
-  justify-content:space-between;  
-  align-items:center;   
-  padding:0px 20px;   
-  z-index: 2;
+    background: grey;
+    display: flex;
+    top: 0;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 2;
 }
- 
+
 .navbar-nav {
-  margin-right: 50px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: larger;
+    margin-right: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: larger;
 }
 .nav-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
- .navbar{  
-  display:flex;  
-  justify-content:space-between;  
- }  
- .list-item {  
-  padding:10px;  
-  list-style:none;  
- }  
- .nav-link{  
-  color:inherit;  
-  text-decoration:none;  
- }  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.list-item {
+    padding: 10px;
+    list-style: none;
+}
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
 
-  /*Properties for Hamburger*/  
-  .ham{  
-    display:none;  
-    padding:5px;  
-    cursor:pointer;  
-   }  
-   .bar1,.bar2,.bar3{  
-    display:block;  
-    width:35px;  
-    height:3px;  
-    margin:5px auto;  
-    background-color:#101010;  
-    transition: 0.4s;  
-   } 
+/*Properties for Hamburger*/
+.ham {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+    transition: 0.4s;
+}
 /*** MENU + HAMBURHER MENU ***/
-   @media only screen and (max-width:768px){  
-    *{  
-      overflow:hidden;  
-     }  
-    .navbar{  
-      position:absolute;   
-      top:10vh;  
-      right:0px;  
-      flex-direction:column;  
-      background-color: pink;    
-      transition:transform 0.3s ease-in;  
-      transform:translate(100%);
-      width: 50%; 
-     }  
-    .nav-change{  
-      transform:translate(0%);  
-     }  
-    .ham{  
-      display:block;  
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      margin-right: 16px;
-     }  
-    .change .bar1 {  
-     transform: rotate(45deg) translate(8px,3px);  
-    }  
-    .change .bar2 {  
-     opacity: 0;  
-    }  
-    .change .bar3 {  
-     transform: rotate(-45deg) translate(8px,-3px);  
-    }  
-    }  
-
+@media only screen and (max-width: 768px) {
+    * {
+        overflow: hidden;
+    }
+    .navbar {
+        position: absolute;
+        top: 10vh;
+        right: 0px;
+        flex-direction: column;
+        background-color: pink;
+        transition: transform 0.3s ease-in;
+        transform: translate(100%);
+        width: 50%;
+    }
+    .nav-change {
+        transform: translate(0%);
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        margin-right: 16px;
+    }
+    .change .bar1 {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: rotate(-45deg) translate(8px, -3px);
+    }
+}
 
 /**** Footer ****/
-footer.footer{
+footer.footer {
     position: fixed;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
     bottom: 0;
     width: 100%;
-    left: 0;    
+    left: 0;
     max-height: 530px;
     padding-bottom: 20px;
-
- }
-.footerLogo{
-   width: 200px;
-   height: 96px;
 }
-.footerLogo svg{
-  width: 100%;
-  height: 100%;
+.footerLogo {
+    width: 200px;
+    height: 96px;
 }
-.links ul{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8px 16px;
-  list-style: none;
-  width: 206px;
-  height: 184px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-top: 0px;
+.footerLogo svg {
+    width: 100%;
+    height: 100%;
 }
-li a{ 
-  width: 99px;
-  height: 24px;
-  left: 53.5px;
-  top: 56px;
-  font-family: 'Calluna';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
-  text-decoration-line: underline;
-  color: #00332C;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-bottom: 24px;
+.links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 16px;
+    list-style: none;
+    width: 206px;
+    height: 184px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 0px;
 }
-.contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 16px;
-  position: static;
-  width: 222px;
-  height: 112px;
-  left: 0px;
-  top: 344px;
-  color: #00332C;
-  font-family: 'Chillax';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: center;  
-  flex: none;
-  order: 2;
-  flex-grow: 0;  
+li a {
+    width: 99px;
+    height: 24px;
+    left: 53.5px;
+    top: 56px;
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #00332c;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 24px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    position: static;
+    width: 222px;
+    height: 112px;
+    left: 0px;
+    top: 344px;
+    color: #00332c;
+    font-family: "Chillax";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
 }
 .adress p,
 .phone p,
-.email p{
-  margin: 0px;
+.email p {
+    margin: 0px;
 }
 @media screen and (min-width: 1000px) {
-  footer.footer{   
-    flex-direction: row;
-    height: 360px;
-    padding-bottom: 0;   
-  }
-  .footerLogo{
-    width: 500px;
-    height: 264px;
-    margin-right: -50px;
-
-  }
-  .links{
-    width: 363px;
-    height: 200px;
-    position: absolute;
-    right: 0;    
-  }
-  li a {   
-    width: 218px;
-    height: 48px;
-    left: 8px;
-    top: 8px; 
-    font-size: 48px;
-    line-height: 63px;
-    letter-spacing: 0.01em;
-  }
-  a{
-    text-align: start;
-  }
-  .contact{
-    width: 650px;
-    height: 200px;
-    font-size: 32px;
-    line-height: 64px;
-    letter-spacing: 0.02em;   
-  }
-  .adress p,
-  .phone p,
-  .email p{
-    text-align: start;
-  }
+    footer.footer {
+        flex-direction: row;
+        height: 360px;
+        padding-bottom: 0;
+    }
+    .footerLogo {
+        width: 500px;
+        height: 264px;
+        margin-right: -50px;
+    }
+    .links {
+        width: 363px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+    }
+    li a {
+        width: 218px;
+        height: 48px;
+        left: 8px;
+        top: 8px;
+        font-size: 48px;
+        line-height: 63px;
+        letter-spacing: 0.01em;
+    }
+    a {
+        text-align: start;
+    }
+    .contact {
+        width: 650px;
+        height: 200px;
+        font-size: 32px;
+        line-height: 64px;
+        letter-spacing: 0.02em;
+    }
+    .adress p,
+    .phone p,
+    .email p {
+        text-align: start;
+    }
 }

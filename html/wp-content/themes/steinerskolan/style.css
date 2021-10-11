@@ -150,6 +150,13 @@ li.nav-item {
     }
 }
 
+.custom-logo {
+    width: 140px;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  
 /**** container ***/ 
 .container{
     width: 100%;

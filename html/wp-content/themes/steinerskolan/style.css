@@ -28,8 +28,7 @@
 */
 
 * {
-    margin: 0;
-    
+    margin: 0; 
 }
 
 body {
@@ -57,37 +56,40 @@ body {
 }
 
 /*Properties for Nav-bar*/
-* {
-    margin: 0;
-}
+
 
 /*** HEADER ***/
 header {
     background: var(--white-bg-color);
     display: flex;
     top: 0;
-    height: 10vh;
+    height: 12vh;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
     z-index: 2;
 }
 
-.navbar-nav {
+nav.navbar-nav {
     margin-right: 50px;
     text-transform: uppercase;
     text-decoration: none;
     font-size: larger;
 }
 .nav-link:hover {
-    text-decoration: underline;
+    text-decoration: underline var(--green-primary);
+    text-decoration-thickness: 3px;
 }
 
-.navbar {
+li.nav-item:active a {
+    font-weight: bold;
+}
+
+ul.navbar {
     display: flex;
     justify-content: space-between;
 }
-.list-item {
+li.nav-item {
     padding: 10px;
     list-style: none;
 }
@@ -115,14 +117,14 @@ header {
 /*** MENU + HAMBURHER MENU ***/
 @media only screen and (max-width: 768px) {
     * {
-        overflow: hidden;
+        overflow-x: hidden;
     }
     .navbar {
         position: absolute;
-        top: 10vh;
+        top: 12vh;
         right: 0px;
         flex-direction: column;
-        background-color: pink;
+        background-color: var(--white-bg-color);
         transition: transform 0.3s ease-in;
         transform: translate(100%);
         width: 50%;
@@ -147,6 +149,7 @@ header {
         transform: rotate(-45deg) translate(8px, -3px);
     }
 }
+
 /**** container ***/ 
 .container{
     width: 100%;

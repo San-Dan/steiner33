@@ -150,6 +150,103 @@ li.nav-item {
     }
 }
 
+/*** anmalan ***/
+.anmalanBox{
+    position: absolute;
+    max-width: 380px;  
+    height: 448px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;   
+    top: 200px; 
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px; 
+    color: #F2F7F5;
+}
+.anmalanBox .heading{    
+    top: -30px;
+    margin-bottom: 20px;
+    font-family: 'Calluna';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #F2F7F5;
+}
+.anmalanBox p{
+    width: 382px;
+    max-height: 700px;
+    left: 16px;
+    top: 200px;
+    margin-top: 0px;    
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;    
+    color: #F2F7F5;    
+}
+.ansökbtn.is-style-fill{
+    position: absolute;
+    padding: 0px;
+    max-height: 64px;
+    max-width: 161px;
+    border:none;
+    max-height: 64px;
+    left: 150px;
+    top: 680px;
+    background: #FAAE2B;  
+    margin-top: 20px;
+    box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09), 0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667), 0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
+    border-radius: 8px;
+    padding-bottom: 4px;
+    padding-top: 10px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #00332C;   
+}
+@media screen and (min-width: 1000px) {
+    .anmalanBox{       
+        width: 100%;       
+        height: 80vh;   
+        padding-left:370px;
+        padding-right: 350px; 
+    }
+    .anmalanBox p{
+        width: 1000px;
+        max-height: 595px;
+        font-size: 24px;
+        Line-height: 32px;
+        letter-spacing: 0.02em;        
+        color: #F2F7F5;     
+    }
+    .anmalanBox .heading{        
+        font-size: 72px;
+        line-height: 72px;
+        color: #F2F7F5;
+        height: 72px;
+        width: 415px;
+        top: -40px;
+        margin-top: -30px;      
+    }
+    .ansökbtn.is-style-fill{
+        left: 665px;
+        top: 660px;
+        text-align: center;       
+        width: 200px;     
+    }
+}
+
+
 /**** container ***/ 
 .container{
     width: 100%;
@@ -157,11 +254,8 @@ li.nav-item {
 }
 
 /**** Footer ****/
-.footer{
-    position: relative;
-    bottom: 0px;  
-}
 footer.footer {
+    /* width: 100%; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -175,7 +269,7 @@ footer.footer {
 }
 .footerLogo {
     width: 200px;
-    height: 96px;
+    height: 100px;
 }
 .footerLogo svg {
     width: 100%;

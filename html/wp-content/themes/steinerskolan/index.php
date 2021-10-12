@@ -13,5 +13,7 @@
     <!-- <?php endif; ?> -->
     <!-- </div>/col -->
     <!-- </div>/row -->
-    <div class="containter"></div>
+
+    <div class="container">
+        
         <?php get_footer(); ?>

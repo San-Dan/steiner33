@@ -68,6 +68,8 @@ header {
     align-items: center;
     padding: 0px 20px;
     z-index: 2;
+    position: fixed;
+    width: 100%;
 }
 
 nav.navbar-nav {
@@ -123,7 +125,7 @@ li.nav-item {
         overflow-x: hidden;
     }
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 12vh;
         right: 0px;
         flex-direction: column;
@@ -140,7 +142,7 @@ li.nav-item {
         position: absolute;
         z-index: 1;
         right: 0;
-        margin-right: 16px;
+        margin-right: 60px;
     }
     .change .bar1 {
         transform: rotate(45deg) translate(8px, 3px);
@@ -151,6 +153,23 @@ li.nav-item {
     .change .bar3 {
         transform: rotate(-45deg) translate(8px, -3px);
     }
+}
+
+/* Testing FONTS on box */
+.skolkokBox {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal;
+}
+.kalendariumBox {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal;  
+}
+.arshjulBox {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal; 
 }
 
 /*** anmalan ***/

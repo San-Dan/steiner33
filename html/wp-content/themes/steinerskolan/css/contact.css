@@ -136,6 +136,23 @@
         margin-top: 30px;
         margin-bottom: 50px;
     }
+    .kontaktPTwo {
+        /* height: 100%; */
+        /* width: 100%; */
+        /* left: 16px; */
+        font-family: "Chillax";
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #f2f7f5;
+    }
+    .kontaktaOss h3 {
+        font-family: 'Calluna';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+    }
     /* .container {
         padding-bottom: 50px;
         margin-bottom: 50px;

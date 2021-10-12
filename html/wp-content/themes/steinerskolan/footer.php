@@ -1,5 +1,4 @@
-</div> <!-- /.continer -->
-
+</main>
 <footer class="footer ">
     <div class="footerLogo">
         <svg width="200" height="96" viewBox="0 0 200 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +137,8 @@
     </div>
 
 </footer>
-</div><!-- #page -->
-
+<!-- </div>#page -->
+<!-- </main> -->
 <?php wp_footer(); ?>
+
 </body>

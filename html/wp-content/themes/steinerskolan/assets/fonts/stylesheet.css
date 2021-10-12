@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Calluna';
+    src: url('Calluna-Regular.woff2') format('woff2'),
+        url('Calluna-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chillax';
+    src: url('Chillax-Regular.woff2') format('woff2'),
+        url('Chillax-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

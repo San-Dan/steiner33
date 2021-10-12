@@ -136,6 +136,7 @@
             <p>rudolf@steinerskolan.se</p>
         </div>
     </div>
+
 </footer>
 </div><!-- #page -->
 

@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<head> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="<?php bloginfo('charset'); ?>">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
-    <?php wp_head(); ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="<?php bloginfo('charset'); ?>">
+
+  <?php wp_head(); ?>
 </head>
 
 <body class="loading" <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-    
-<?php $testMenu = get_menu('Menu'); ?>
 
-<header>
+  <?php $testMenu = get_menu('Menu'); ?>
 
-<?php if (has_custom_logo()) : ?>
+  <header>
+
+    <?php if (has_custom_logo()) : ?>
       <div class="site-logo"><?php the_custom_logo(); ?></div>
     <?php else : ?>
       <a class="navbar-brand" href="<?= site_url(); ?>"> <?php bloginfo('name'); ?></a>
     <?php endif; ?>
 
-  <div class="ham" type="menu">
-  <span class="bar1"></span>  
-    <span class="bar2"></span>  
-    <span class="bar3"></span>  
+    <div class="ham" type="menu">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
     </div>
 
-    
+
     <nav class="navbar-nav">
       <ul class="navbar">
         <?php $currentPageId = $wp_query->queried_object_id;
@@ -56,5 +56,5 @@
     </nav>
 
 
-</header>
-<main>
+  </header>
+  <main>

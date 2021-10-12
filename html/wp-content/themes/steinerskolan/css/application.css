@@ -70,7 +70,7 @@
     max-width: 161px;
     border: none;
     max-height: 64px;
-    left: 150px;
+    margin-left: 150px;
     top: 680px;
     background: #faae2b;
     margin-top: 0px;
@@ -115,7 +115,7 @@
         margin-top: 30px;
     }
     .ansökbtn.is-style-fill {
-        left: 665px;        
+        margin-left: 665px;        
         text-align: center;
         margin-top: 20px;
         width: 200px;

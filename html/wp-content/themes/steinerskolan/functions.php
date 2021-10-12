@@ -13,6 +13,9 @@ add_action('after_setup_theme', function () {
     // Add support for editor styles.
     add_theme_support('editor-styles');
 
+    // Enqueue editor styles.
+    add_editor_style('editor.css');
+
     add_theme_support(
         'custom-logo',
         array(
@@ -47,5 +50,6 @@ add_action('after_setup_theme', function () {
 
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_stylesheet_uri());
-    wp_enqueue_style('header', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', true, '1.1', 'all');
+    wp_enqueue_script('main', get_template_directory_uri() . '/main.js', '', '', true);
 });

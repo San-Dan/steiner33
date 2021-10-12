@@ -1,196 +1,532 @@
+/* Theme Color Scheme*/
+:root {
+    --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
+    --white-bg-color: #f2f7f5; /* text på grön bakgrund och bg på Vår Värdegrund, footer mm*/
+    --black: #00332c;
+    --white-text: #fffffe; /* bara alumni info-kort? */
+    --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
+    --yellow-btn-pressed: #fcd38c;
+}
+
 /*
-Theme Name: Steiner Skola theme
-Theme URI:
-Author: Aseel, Gilda, Sandra
-Author URI:
-Description: A new layout to Steiner skola's website.
-Version: 1.0
+  Using color variables, example: 
+    .one {
+      color: white;
+      background-color: var(--green-primary);
+    }
+    Menyns färger:
+    - Länkar default: green bg color 80% , Hover/Klick och underkategorier: 100% 
+    Buttons
+    - Background default: yellow btn bg
+    - Pressed: --yellow-btn-pressed
+    - Text: green-primary
+    Lägga green-primary som bodys background color??
 */
 
+* {
+    margin: 0;
+}
+
 body {
-    background-color: white;
+    background-color: var(--green-primary);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
-/* Header - Nav */
+@font-face {
+    font-family: "Calluna";
+    src: url("assets/fonts/Calluna-Regular.woff2") format("woff2"),
+        url("assets/fonts/Calluna-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url("assets/fonts/Chillax-Regular.woff2") format("woff2"),
+        url("assets/fonts/Chillax-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Properties for Nav-bar*/
+
+/*** HEADER ***/
 header {
-    padding: 1rem;
+    background: var(--white-bg-color);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: sticky;
     top: 0;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 2;
+    position: fixed;
     width: 100%;
 }
 
-.ham {
-    position: absolute;
-    z-index: 1;
-    right: 1rem;
-    width: 40px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-.open-menu {
-    display: flex;
-}
-.hide-open {
-    display: none;
-}
-.close-menu {
-    display: none;
-}
-.show-close {
-    display: flex;
-}
-
-header nav ul {
-    list-style: none;
-    text-decoration: none;
+nav.navbar-nav {
+    margin-right: 50px;
     text-transform: uppercase;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-header nav ul li {
-    padding: 0 2rem;
-}
-
-@media (min-width: 1000px) {
-    .ham {
-        display: none;
-    }
-
-    header {
-        justify-content: space-around;
-    }
-}
-
-@media (max-width: 1000px) {
-    .navbar {
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        position: absolute;
-        overflow: hidden;
-    }
-
-    /*.show-nav {
-    
-  }*/
-
-    .navbar-nav {
-        height: 100%;
-        width: 100%;
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header nav ul li {
-        padding: 1rem 1rem;
-    }
-}
-
-.navbar-brand {
     text-decoration: none;
     font-size: larger;
+}
+
+.nav-link:hover {
+    text-decoration: underline var(--yellow-btn-bg);
+    text-decoration-thickness: 3px;
+}
+
+.active {
+    text-decoration: underline var(--yellow-btn-bg);
+    text-decoration-thickness: 3px;
+}
+
+ul.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+li.nav-item {
+    padding: 10px;
+    list-style: none;
+}
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Properties for Hamburger*/
+.ham {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+    transition: 0.4s;
+}
+/*** MENU + HAMBURHER MENU ***/
+@media only screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+    .navbar {
+        position: fixed;
+        top: 12vh;
+        right: 0px;
+        flex-direction: column;
+        background-color: var(--white-bg-color);
+        transition: transform 0.3s ease-in;
+        transform: translateY(-200%);
+        width: 50%;
+    }
+    .nav-change {
+        transform: translateY(0);
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        margin-right: 60px;
+    }
+    .change .bar1 {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: rotate(-45deg) translate(8px, -3px);
+    }
+}
+
+/* Testing FONTS on box */
+.skolkokBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+}
+.kalendariumBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+}
+.arshjulBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*** anmalan ***/
+.anmalanBox {
+    position: absolute;
+    max-width: 380px;
+    height: 448px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 200px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #f2f7f5;
+}
+.anmalanBox .heading {
+    top: -30px;
+    margin-bottom: 20px;
+    font-family: "Calluna";
+    font-style: normal;
     font-weight: bold;
-    text-transform: uppercase;
-    color: black;
+    font-size: 24px;
+    line-height: 32px;
+    color: #f2f7f5;
+}
+.anmalanBox p {
+    width: 382px;
+    max-height: 700px;
+    left: 16px;
+    top: 200px;
+    margin-top: 0px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #f2f7f5;
+}
+.ansökbtn.is-style-fill {
+    position: absolute;
+    padding: 0px;
+    max-height: 64px;
+    max-width: 161px;
+    border: none;
+    max-height: 64px;
+    left: 150px;
+    top: 680px;
+    background: #faae2b;
+    margin-top: 20px;
+    box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09),
+        0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667),
+        0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
+    border-radius: 8px;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #00332c;
+}
+@media screen and (min-width: 1000px) {
+    .anmalanBox {
+        width: 100%;
+        height: 80vh;
+        padding-left: 370px;
+        padding-right: 350px;
+    }
+    .anmalanBox p {
+        width: 1000px;
+        max-height: 595px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #f2f7f5;
+    }
+    .anmalanBox .heading {
+        font-size: 72px;
+        line-height: 72px;
+        color: #f2f7f5;
+        height: 72px;
+        width: 415px;
+        top: -40px;
+        margin-top: -30px;
+    }
+    .ansökbtn.is-style-fill {
+        left: 665px;
+        top: 660px;
+        text-align: center;
+        width: 200px;
+    }
+}
+/*** Kontakt ***/
+.map {
+    width: 100%;
+    height: 450px;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+}
+.hittaHit {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 525px;
+    background: #f2f7f5;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+.kontaktHeadingOne {
+    position: absolute;
+    width: 178px;
+    height: 48.09px;
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    color: #00473e;
+}
+.kontaktPOne {
+    width: 382px;
+    height: 100%;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #00473e;
+}
+.kontaktaOss {
+    position: absolute;
+    width: 100%;
+    left: 16px;
+    top: 1188px;
+    margin-top: -20px;
+    padding-top: 0px;
+}
+.kontaktHeadingTwo {
+    width: 263px;
+    height: 48px;
+    left: 16px;
+    padding-top: 0px;
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    color: #f2f7f5;
+    margin-bottom: 16px;
+}
+.kontaktaOss h3 {
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #f2f7f5;
+}
+.kontaktPTwo {
+    height: 100%;
+    width: 100%;
+    left: 16px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #f2f7f5;
+}
+@media screen and (min-width: 1000px) {
+    .map {
+        position: absolute;
+        width: 50%;
+        height: 84.1vh;
+        left: 50%;
+    }
+    .map iframe {
+        padding-right: 44px;
+        width: 95%;
+        background: #f2f7f5;
+    }
+    .hittaHit {
+        position: absolute;
+        width: 50%;
+        padding-left: 141px;
+        top: 100px;
+        background: #f2f7f5;
+        height: 87vh;
+    }
+    .kontaktaOss {
+        width: 100%;
+        left: 141px;
+        top: 780px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .container {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+}
+/*** Logo ***/
+.custom-logo {
+    width: 140px;
+    height: auto;
+    padding: 0.5rem;
+}
+
+/**** container ***/
+.container {
+    width: 100%;
+    height: 180vh;
 }
 
 /**** Footer ****/
-footer {
-    position: fixed;
+footer.footer {
+    /* width: 100%; */
+    position: relative;
     display: flex;
-    bottom: 0;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0px;
+    width: 100vw;
     left: 0;
-    color: white;
-    height: 220px;
+    max-height: 530px;
+    padding-bottom: 20px;
+    background-color: var(--white-bg-color);
 }
-div.vertical {
+.footerLogo {
+    width: 200px;
+    height: 100px;
+}
+.footerLogo svg {
+    width: 100%;
+    height: 100%;
+}
+div.links ul.links {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    background-color: rgb(84, 134, 146);
-}
-.first {
-    background-color: rgb(66, 97, 105);
-    height: 110px;
-    display: flex;
-    align-items: center;
-}
-ul {
-    list-style: none;
-    display: flex;
     justify-content: space-around;
-    width: 100%;
-}
-.second {
-    height: 110px;
-    width: 100%;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 8px 16px;
+    list-style: none;
+    width: 206px;
+    height: 184px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 0px;
 }
-div.horizontal {
-    width: 50%;
-    background-color: rgb(114, 147, 155);
-    display: flex;
-    flex-direction: row;
-    /* padding: 5px; */
+li.link a {
+    width: 99px;
+    height: 24px;
+    left: 53.5px;
+    top: 56px;
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: var(--green-primary); /*#00332C;*/
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 24px;
 }
-div.contact,
-div.links {
-    width: 50%;
+.contact {
     display: flex;
     flex-direction: column;
-    justify-items: flex-start;
-    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    position: static;
+    width: 222px;
+    height: 112px;
+    left: 0px;
+    top: 344px;
+    color: var(--green-primary); /*#00332C;*/
+    font-family: "Chillax";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
 }
-p {
-    font-size: 14px;
-}
-@media screen and (min-width: 600px) {
-    footer,
-    p {
-        font-size: 16px;
-    }
-    i.fab {
-        font-size: 22px;
-    }
-    .kontakt {
-        font-size: 18px;
-    }
+.adress p,
+.phone p,
+.email p {
+    margin: 0px;
 }
 @media screen and (min-width: 1000px) {
-    footer,
-    p {
-        font-size: 18px;
+    footer.footer {
+        flex-direction: row;
+        height: 360px;
+        padding-bottom: 0;
+        padding-left: 32px;
+        /* padding-right: 32px;     */
     }
-    i.fab {
-        font-size: 24px;
+    .footerLogo {
+        min-width: 400px;
+        height: 264px;
+        margin-right: 125px;
     }
-    .kontakt {
-        font-size: 20px;
+    div.links {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        align-items: start;
+        margin-right: -50px;
+    }
+    ul.links {
+        width: 360px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+    li.link {
+        width: 360px;
+    }
+    li.link a {
+        width: 360px;
+        height: 48px;
+        top: 8px;
+        font-size: 40px;
+        line-height: 63px;
+        letter-spacing: 0.01em;
+        text-align: start;
+    }
+    .contact {
+        width: 450px;
+        height: 200px;
+        font-size: 32px;
+        line-height: 64px;
+        letter-spacing: 0.02em;
+        align-items: start;
+        text-align: left;
+    }
+    .adress p,
+    .phone p,
+    .email p {
+        text-align: start;
+        align-items: start;
+        text-align: left;
     }
 }

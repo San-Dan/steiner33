@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: "Calluna";
-    src: url("assets/fonts/Calluna-Regular.woff2") format("woff2"),
-        url("assets/fonts/Calluna-Regular.woff") format("woff");
+    src: url("../assets/fonts/Calluna-Regular.woff2") format("woff2"),
+        url("../assets/fonts/Calluna-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: "Chillax";
-    src: url("assets/fonts/Chillax-Regular.woff2") format("woff2"),
-        url("assets/fonts/Chillax-Regular.woff") format("woff");
+    src: url("../assets/fonts/Chillax-Regular.woff2") format("woff2"),
+        url("../assets/fonts/Chillax-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

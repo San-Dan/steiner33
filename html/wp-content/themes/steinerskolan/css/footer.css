@@ -1,3 +1,30 @@
+:root {
+    --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
+    --white-bg-color: #f2f7f5; /* text på grön bakgrund och bg på Vår Värdegrund, footer mm*/
+    --black: #00332c;
+    --white-text: #fffffe; /* bara alumni info-kort? */
+    --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
+    --yellow-btn-pressed: #fcd38c;
+}
+
+@font-face {
+    font-family: "Calluna";
+    src: url("assets/fonts/Calluna-Regular.woff2") format("woff2"),
+        url("assets/fonts/Calluna-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url("assets/fonts/Chillax-Regular.woff2") format("woff2"),
+        url("assets/fonts/Chillax-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /**** Footer ****/
 footer.footer {
     /* width: 100%; */

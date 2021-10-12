@@ -32,7 +32,7 @@ footer.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    bottom: 0px;
+    bottom: 0;
     width: 100vw;
     left: 0;
     max-height: 530px;
@@ -108,12 +108,11 @@ li.link a {
     margin: 0px;
 }
 @media screen and (min-width: 1000px) {
-    footer.footer {
+    footer.footer {        
         flex-direction: row;
-        height: 360px;
+        height: 360px;        
         padding-bottom: 0;
-        padding-left: 32px;
-        /* padding-right: 32px;     */
+        padding-left: 32px;   
     }
     .footerLogo {
         min-width: 400px;

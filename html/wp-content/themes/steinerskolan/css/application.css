@@ -40,7 +40,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    color: #f2f7f5;
+    color: var(--white-bg-color);
 }
 .anmalanBox .heading {
     top: -30px;
@@ -52,7 +52,7 @@
     line-height: 32px;
     color: #f2f7f5;
 }
-.anmalanBox p {
+.anmalanBoxText {
     width: 382px;
     max-height: 700px;
     left: 16px;

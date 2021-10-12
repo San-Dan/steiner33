@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ div.hero-images {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80%;
+	background-color: #f2f7f5;
+
+	.cover-image {
+		width: 300px;
+	}
+	
+	.content-image {
+		width: 200px;
+		z-index: 1;
+	}
+}

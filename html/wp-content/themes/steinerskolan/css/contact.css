@@ -113,8 +113,9 @@
     .map {
         position: absolute;
         width: 50%;
-        height: 95.6vh;
+        height: 87.9vh;
         left: 50%;
+        top: 90px;
     }
     .map iframe {
         padding-right: 44px;
@@ -129,10 +130,11 @@
         background: #f2f7f5;
         height: 88vh;
     }
-    .kontaktaOss {
+    .kontaktaOss { 
+    /* .wp-block-group__inner-container*/
         width: 100%;
         left: 141px;
-        top: 780px;
+        top: 750px;
         margin-top: 30px;
         margin-bottom: 50px;
     }
@@ -146,7 +148,9 @@
         letter-spacing: 0.02em;
         color: #f2f7f5;
     }
-    .kontaktaOss h3 {
+    .kontaktaOss h3 
+    /* ,.wp-block-group__inner-container h3 */
+    {
         font-family: 'Calluna';
         font-style: normal;
         font-weight: 600;

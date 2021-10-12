@@ -26,10 +26,9 @@
 }
 
 /*** anmalan ***/
-.anmalanBox {
-    position: absolute;
+.anmalanBox {   
     max-width: 380px;
-    height: 550px;
+    max-height: 550px;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
@@ -40,11 +39,10 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    color: var(--white-bg-color);
-    /* margin-bottom: 200px; */
+    color: var(--white-bg-color);    
 }
 .anmalanBox .heading {
-    top: -30px;
+    top: -20px;
     margin-bottom: 20px;
     font-family: "Calluna";
     font-style: normal;
@@ -66,8 +64,7 @@
     line-height: 26px;
     color: #f2f7f5;
 }
-.ansökbtn.is-style-fill {
-    position: absolute;
+.ansökbtn.is-style-fill {    
     padding: 0px;
     max-height: 64px;
     max-width: 161px;
@@ -76,7 +73,8 @@
     left: 150px;
     top: 680px;
     background: #faae2b;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 80px;
     box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09),
         0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667),
         0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
@@ -93,10 +91,9 @@
     color: #00332c;
 }
 @media screen and (min-width: 1000px) {
-    .anmalanBox {
-        top: 200px;
+    .anmalanBox {        
         width: 100%;
-        height: 80vh;
+        max-height: 500px;
         padding-left: 370px;
         padding-right: 350px;
     }
@@ -115,12 +112,12 @@
         height: 72px;
         width: 415px;
         top: -40px;
-        margin-top: -30px;
+        margin-top: 30px;
     }
     .ansökbtn.is-style-fill {
-        left: 665px;
-        top: 660px;
+        left: 665px;        
         text-align: center;
+        margin-top: 20px;
         width: 200px;
     }
 }

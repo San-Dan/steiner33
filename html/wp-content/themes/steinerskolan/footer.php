@@ -137,8 +137,5 @@
     </div>
 
 </footer>
-<!-- </div>#page -->
-<!-- </main> -->
 <?php wp_footer(); ?>
-
 </body>

@@ -1,0 +1,124 @@
+:root {
+    --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
+    --white-bg-color: #f2f7f5; /* text på grön bakgrund och bg på Vår Värdegrund, footer mm*/
+    --black: #00332c;
+    --white-text: #fffffe; /* bara alumni info-kort? */
+    --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
+    --yellow-btn-pressed: #fcd38c;
+}
+
+@font-face {
+    font-family: "Calluna";
+    src: url("assets/fonts/Calluna-Regular.woff2") format("woff2"),
+        url("assets/fonts/Calluna-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url("assets/fonts/Chillax-Regular.woff2") format("woff2"),
+        url("assets/fonts/Chillax-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Properties for Nav-bar*/
+
+/*** HEADER ***/
+header {
+    background: var(--white-bg-color);
+    display: flex;
+    top: 0;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+}
+
+nav.navbar-nav {
+    margin-right: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.nav-link:hover {
+    text-decoration: underline var(--yellow-btn-bg);
+    text-decoration-thickness: 3px;
+}
+
+.active {
+    text-decoration: underline var(--yellow-btn-bg);
+    text-decoration-thickness: 3px;
+}
+
+ul.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+li.nav-item {
+    padding: 10px;
+    list-style: none;
+}
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Properties for Hamburger*/
+.ham {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+    transition: 0.4s;
+}
+/*** MENU + HAMBURHER MENU ***/
+@media only screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+    .navbar {
+        position: fixed;
+        top: 12vh;
+        right: 0px;
+        flex-direction: column;
+        background-color: var(--white-bg-color);
+        transition: transform 0.3s ease-in;
+        transform: translateY(-200%);
+        width: 50%;
+    }
+    .nav-change {
+        transform: translateY(0);
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        margin-right: 60px;
+    }
+    .change .bar1 {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: rotate(-45deg) translate(8px, -3px);
+    }
+}

@@ -1,4 +1,3 @@
-/* Theme Color Scheme*/
 :root {
     --green-primary: #00473e; /* Primary 100% och 80% (opacitet?)*/
     --white-bg-color: #f2f7f5; /* text på grön bakgrund och bg på Vår Värdegrund, footer mm*/
@@ -6,31 +5,6 @@
     --white-text: #fffffe; /* bara alumni info-kort? */
     --yellow-btn-bg: #faae2b; /* Secondary 100% och 80% */
     --yellow-btn-pressed: #fcd38c;
-}
-
-/*
-  Using color variables, example: 
-    .one {
-      color: white;
-      background-color: var(--green-primary);
-    }
-    Menyns färger:
-    - Länkar default: green bg color 80% , Hover/Klick och underkategorier: 100% 
-    Buttons
-    - Background default: yellow btn bg
-    - Pressed: --yellow-btn-pressed
-    - Text: green-primary
-    Lägga green-primary som bodys background color??
-*/
-
-* {
-    margin: 0;
-}
-
-body {
-    background-color: var(--green-primary);
-    width: 100vw;
-    overflow-x: hidden;
 }
 
 @font-face {
@@ -51,15 +25,19 @@ body {
     font-display: swap;
 }
 
-/*** Logo ***/
-.custom-logo {
-    width: 140px;
-    height: auto;
-    padding: 0.5rem;
+/* Testing FONTS on box */
+.skolkokBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
 }
-
-/**** container ***/
-/* .container {
-    width: 100%;
-    height: 180vh;
-} */
+.kalendariumBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+}
+.arshjulBox {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+}

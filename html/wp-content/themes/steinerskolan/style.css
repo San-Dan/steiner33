@@ -24,7 +24,7 @@
 */
 
 * {
-    margin: 0; 
+    margin: 0;
 }
 
 body {
@@ -52,7 +52,6 @@ body {
 }
 
 /*Properties for Nav-bar*/
-
 
 /*** HEADER ***/
 header {
@@ -84,7 +83,6 @@ nav.navbar-nav {
     text-decoration: underline var(--yellow-btn-bg);
     text-decoration-thickness: 3px;
 }
-
 
 ul.navbar {
     display: flex;
@@ -153,161 +151,163 @@ li.nav-item {
 
 /* Testing FONTS on box */
 .skolkokBox {
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
 }
 .kalendariumBox {
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
-    font-weight: normal;  
+    font-weight: normal;
 }
 .arshjulBox {
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
-    font-weight: normal; 
+    font-weight: normal;
 }
 
 /*** anmalan ***/
-.anmalanBox{
+.anmalanBox {
     position: absolute;
-    max-width: 380px;  
+    max-width: 380px;
     height: 448px;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
-    padding-right: 20px;   
-    top: 200px; 
-    font-family: 'Chillax';
+    padding-right: 20px;
+    top: 200px;
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 28px; 
-    color: #F2F7F5;
+    line-height: 28px;
+    color: #f2f7f5;
 }
-.anmalanBox .heading{    
+.anmalanBox .heading {
     top: -30px;
     margin-bottom: 20px;
-    font-family: 'Calluna';
+    font-family: "Calluna";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #F2F7F5;
+    color: #f2f7f5;
 }
-.anmalanBox p{
+.anmalanBox p {
     width: 382px;
     max-height: 700px;
     left: 16px;
     top: 200px;
-    margin-top: 0px;    
-    font-family: 'Chillax';
+    margin-top: 0px;
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 26px;    
-    color: #F2F7F5;    
+    line-height: 26px;
+    color: #f2f7f5;
 }
-.ansökbtn.is-style-fill{
+.ansökbtn.is-style-fill {
     position: absolute;
     padding: 0px;
     max-height: 64px;
     max-width: 161px;
-    border:none;
+    border: none;
     max-height: 64px;
     left: 150px;
     top: 680px;
-    background: #FAAE2B;  
+    background: #faae2b;
     margin-top: 20px;
-    box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09), 0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667), 0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
+    box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09),
+        0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667),
+        0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
     border-radius: 8px;
     padding-bottom: 4px;
-    padding-top: 10px; 
+    padding-top: 10px;
     padding-left: 0px;
     padding-right: 0px;
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
-    color: #00332C;   
+    color: #00332c;
 }
 @media screen and (min-width: 1000px) {
-    .anmalanBox{       
-        width: 100%;       
-        height: 80vh;   
-        padding-left:370px;
-        padding-right: 350px; 
+    .anmalanBox {
+        width: 100%;
+        height: 80vh;
+        padding-left: 370px;
+        padding-right: 350px;
     }
-    .anmalanBox p{
+    .anmalanBox p {
         width: 1000px;
         max-height: 595px;
         font-size: 24px;
-        Line-height: 32px;
-        letter-spacing: 0.02em;        
-        color: #F2F7F5;     
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #f2f7f5;
     }
-    .anmalanBox .heading{        
+    .anmalanBox .heading {
         font-size: 72px;
         line-height: 72px;
-        color: #F2F7F5;
+        color: #f2f7f5;
         height: 72px;
         width: 415px;
         top: -40px;
-        margin-top: -30px;      
+        margin-top: -30px;
     }
-    .ansökbtn.is-style-fill{
+    .ansökbtn.is-style-fill {
         left: 665px;
         top: 660px;
-        text-align: center;       
-        width: 200px;     
+        text-align: center;
+        width: 200px;
     }
 }
 /*** Kontakt ***/
-.map{
-    width: 100%;  
+.map {
+    width: 100%;
     height: 450px;
 }
-.map iframe{
-    width: 100%;  
-    height:100%;  
+.map iframe {
+    width: 100%;
+    height: 100%;
     margin-bottom: 0px;
 }
-.hittaHit{
+.hittaHit {
     position: absolute;
-    width: 100%;    
+    width: 100%;
     left: 0px;
     top: 525px;
-    background: #F2F7F5;
+    background: #f2f7f5;
     margin-top: 0px;
     padding-top: 20px;
     padding-left: 16px;
     padding-bottom: 16px;
 }
-.kontaktHeadingOne{
+.kontaktHeadingOne {
     position: absolute;
     width: 178px;
-    height: 48.09px;    
-    font-family: 'Calluna';
+    height: 48.09px;
+    font-family: "Calluna";
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 48px;
-    color: #00473E;
+    color: #00473e;
 }
-.kontaktPOne{
+.kontaktPOne {
     width: 382px;
     height: 100%;
     padding-bottom: 0px;
     padding-top: 20px;
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    color: #00473E;
+    color: #00473e;
 }
-.kontaktaOss{
+.kontaktaOss {
     position: absolute;
     width: 100%;
     left: 16px;
@@ -315,66 +315,66 @@ li.nav-item {
     margin-top: -20px;
     padding-top: 0px;
 }
-.kontaktHeadingTwo{  
+.kontaktHeadingTwo {
     width: 263px;
     height: 48px;
     left: 16px;
     padding-top: 0px;
-    font-family: 'Calluna';
+    font-family: "Calluna";
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 48px;
-    color: #F2F7F5;
+    color: #f2f7f5;
     margin-bottom: 16px;
 }
-.kontaktaOss h3{
-    font-family: 'Calluna';
+.kontaktaOss h3 {
+    font-family: "Calluna";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #F2F7F5;
+    color: #f2f7f5;
 }
-.kontaktPTwo{
+.kontaktPTwo {
     height: 100%;
     width: 100%;
     left: 16px;
-    font-family: 'Chillax';
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-    color: #F2F7F5;
+    color: #f2f7f5;
 }
 @media screen and (min-width: 1000px) {
-    .map{
+    .map {
         position: absolute;
-        width: 50%;  
-        height: 84.1vh;     
-        left: 50%;        
+        width: 50%;
+        height: 84.1vh;
+        left: 50%;
     }
-    .map iframe{
+    .map iframe {
         padding-right: 44px;
-        width: 95%; 
-        background: #F2F7F5;      
+        width: 95%;
+        background: #f2f7f5;
     }
-    .hittaHit{
+    .hittaHit {
         position: absolute;
-        width: 50%;    
+        width: 50%;
         padding-left: 141px;
         top: 100px;
-        background: #F2F7F5; 
-        height: 87vh;       
+        background: #f2f7f5;
+        height: 87vh;
     }
-    .kontaktaOss{        
+    .kontaktaOss {
         width: 100%;
         left: 141px;
         top: 780px;
         margin-top: 30px;
-        margin-bottom: 50px;       
+        margin-bottom: 50px;
     }
-    .container{    
+    .container {
         padding-bottom: 50px;
         margin-bottom: 50px;
     }
@@ -384,150 +384,10 @@ li.nav-item {
     width: 140px;
     height: auto;
     padding: 0.5rem;
-  }
-
-  
-/**** container ***/ 
-.container{
-    width: 100%;
-    height: 180vh;
 }
 
-/**** Footer ****/
-footer.footer {
-    /* width: 100%; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0px;
-    width: 100vw;
-    left: 0;
-    max-height: 530px;
-    padding-bottom: 20px;
-    background-color: var(--white-bg-color);
-}
-.footerLogo {
-    width: 200px;
-    height: 100px;
-}
-.footerLogo svg {
+/**** container ***/
+.container {
     width: 100%;
-    height: 100%;
-}
-div.links ul.links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8px 16px;
-    list-style: none;
-    width: 206px;
-    height: 184px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin-top: 0px;
-}
-li.link a {
-    width: 99px;
-    height: 24px;
-    left: 53.5px;
-    top: 56px;
-    font-family: "Calluna";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    text-decoration-line: underline;
-    color: var(--green-primary); /*#00332C;*/
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin-bottom: 24px;
-}
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 16px;
-    position: static;
-    width: 222px;
-    height: 112px;
-    left: 0px;
-    top: 344px;
-    color: var(--green-primary); /*#00332C;*/
-    font-family: "Chillax";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-}
-.adress p,
-.phone p,
-.email p {
-    margin: 0px;
-}
-@media screen and (min-width: 1000px) {
-    footer.footer {
-        flex-direction: row;
-        height: 360px;
-        padding-bottom: 0;
-        padding-left: 32px;
-        /* padding-right: 32px;     */
-    }
-    .footerLogo {
-        min-width: 400px;
-        height: 264px;
-        margin-right: 125px;
-    }
-    div.links {
-        width: 400px;
-        height: 200px;
-        position: absolute;
-        right: 0;
-        align-items: start;
-        margin-right: -50px;
-    }
-    ul.links {
-        width: 360px;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: left;
-    }
-    li.link {
-        width: 360px;
-    }
-    li.link a {
-        width: 360px;
-        height: 48px;
-        top: 8px;
-        font-size: 40px;
-        line-height: 63px;
-        letter-spacing: 0.01em;
-        text-align: start;
-    }
-    .contact {
-        width: 450px;
-        height: 200px;
-        font-size: 32px;
-        line-height: 64px;
-        letter-spacing: 0.02em;
-        align-items: start;
-        text-align: left;
-    }
-    .adress p,
-    .phone p,
-    .email p {
-        text-align: start;
-        align-items: start;
-        text-align: left;
-    }
+    height: 50vh;
 }

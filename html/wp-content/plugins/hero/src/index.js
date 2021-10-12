@@ -10,7 +10,7 @@ const {
 } = wp.blockEditor;
 
 const { PanelBody, Button } = wp.components;
-const { Fragment } = wp.element;
+// const { Fragment } = wp.element;
 
 import "./style.scss";
 import "./editor.scss";
@@ -32,7 +32,9 @@ registerBlockType("create-block/hero", {
 
 		coverImageUrl: {
 			type: "string",
-			default: "",
+			source: "attribute",
+			selector: "img",
+			attribute: "src",
 		},
 
 		contentImageId: {
@@ -42,7 +44,9 @@ registerBlockType("create-block/hero", {
 
 		contentImageUrl: {
 			type: "string",
-			default: "",
+			source: "attribute",
+			selector: "img",
+			attribute: "src",
 		},
 
 		urlLink: {
@@ -83,14 +87,6 @@ registerBlockType("create-block/hero", {
 				{ contentImageUrl: media.url }
 			);
 		};
-
-		// skillnad med media??
-		// const onSelectImage = media => {
-		//     setAttributes({
-		//         mediaURL: media.url,
-		//         mediaID: media.id
-		//     });
-		// };
 
 		const setUrlLink = (value) => {
 			setAttributes({ urlLink: value });
@@ -147,19 +143,22 @@ registerBlockType("create-block/hero", {
 					</MediaUploadCheck>
 				</PanelBody>
 			</InspectorControls>,
-			<div className="text-section">
-				<input className="text-input" onChange={setText} defaultValue={text} />
-				<input
-					className="url-input"
-					onChange={setUrlLink}
-					defaultValue={urlLink}
-				/>
-				<input
-					className="url-input"
-					onChange={setUrlName}
-					defaultValue={urlName}
-				/>
-			</div>,
+			// <div className="text-section">
+			// 	<label>Set presentation text for the school</label>
+			// 	<input className="text-input" onChange={setText} defaultValue={text} />
+			// 	<label>Set URL for link to read more, e.g. to 'Om Oss'</label>
+			// 	<input
+			// 		className="url-input"
+			// 		onChange={setUrlLink}
+			// 		defaultValue={urlLink}
+			// 	/>
+			// 	<label>Set link text, e.g. 'Läs mer'</label>
+			// 	<input
+			// 		className="url-input"
+			// 		onChange={setUrlName}
+			// 		defaultValue={urlName}
+			// 	/>
+			// </div>,
 		];
 	},
 
@@ -168,7 +167,7 @@ registerBlockType("create-block/hero", {
 		return (
 			<div className="hero-images">
 				<img src={coverImageUrl} className="cover-image" />
-				<img src={contentImageUrl} className="content-image" />
+				{/* <img src={contentImageUrl} className="content-image" /> */}
 			</div>
 		);
 	},

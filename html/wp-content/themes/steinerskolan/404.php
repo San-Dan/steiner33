@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
-<h1>404</h1>
-<p>This page doesn't exist. Go back to <a href="<?php bloginfo('url'); ?>">home</a>.</p>
-
+<div class="not-found">
+    <h1>404</h1>
+    <h2>This page doesn't exist. Go back to <a href="<?php bloginfo('url'); ?>">home</a>.</h2>
+</div>
 <?php get_footer(); ?>

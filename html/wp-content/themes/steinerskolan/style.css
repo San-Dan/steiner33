@@ -63,3 +63,8 @@ body {
     width: 100%;
     height: 180vh;
 }
+
+/*  404 Not found */
+.not-found {
+    color:var(--white-bg-color);
+}

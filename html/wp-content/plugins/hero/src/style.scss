@@ -5,21 +5,25 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-hero {
-	width: 80%;
-	color: #fff;
-	padding: 20px;
-}
-
-.cover-image {
-	width: 300px;
-}
-
-.content-image {
-	width: 200px;
-}
+// .wp-block-create-block-hero {
+	
+// 	// padding: 20px;
+// }
 
 .hero-images {
 	display: flex;
+	width: 80%;
+	color: #f2f7f5;
+
+	.cover-image {
+		width: 300px;
+	}
+	
+	.content-image {
+		width: 200px;
+	}
 }
+
+
+
 

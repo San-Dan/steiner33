@@ -76,14 +76,17 @@ nav.navbar-nav {
     text-decoration: none;
     font-size: larger;
 }
+
 .nav-link:hover {
-    text-decoration: underline var(--green-primary);
+    text-decoration: underline var(--yellow-btn-bg);
     text-decoration-thickness: 3px;
 }
 
-li.nav-item:active a {
-    font-weight: bold;
+.active {
+    text-decoration: underline var(--yellow-btn-bg);
+    text-decoration-thickness: 3px;
 }
+
 
 ul.navbar {
     display: flex;
@@ -126,11 +129,11 @@ li.nav-item {
         flex-direction: column;
         background-color: var(--white-bg-color);
         transition: transform 0.3s ease-in;
-        transform: translate(100%);
+        transform: translateY(-200%);
         width: 50%;
     }
     .nav-change {
-        transform: translate(0%);
+        transform: translateY(0);
     }
     .ham {
         display: block;

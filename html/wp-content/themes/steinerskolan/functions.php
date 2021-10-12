@@ -53,12 +53,11 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css', true, '1.1', 'all');
     wp_enqueue_script('main', get_template_directory_uri() . '/main.js', '', '', true);
 
-    wp_enqueue_style('application', get_template_directory_uri() . '/css/about.css', true, '1.1', 'all');
+    wp_enqueue_style('application', get_template_directory_uri() . '/css/application.css', true, '1.1', 'all');
     wp_enqueue_style('homepage', get_template_directory_uri() . '/css/homepage.css', true, '1.1', 'all');
     wp_enqueue_style('header', get_template_directory_uri() . '/css/header.css', true, '1.1', 'all');
     wp_enqueue_style('footer', get_template_directory_uri() . '/css/footer.css', true, '1.1', 'all');
     wp_enqueue_style('about', get_template_directory_uri() . '/css/about.css', true, '1.1', 'all');
-    wp_enqueue_style('school', get_template_directory_uri() . '/css/about.css', true, '1.1', 'all');
-    wp_enqueue_style('contact', get_template_directory_uri() . '/css/about.css', true, '1.1', 'all');
-    wp_enqueue_style('application', get_template_directory_uri() . '/css/about.css', true, '1.1', 'all');
+    wp_enqueue_style('school', get_template_directory_uri() . '/css/school.css', true, '1.1', 'all');
+    wp_enqueue_style('contact', get_template_directory_uri() . '/css/contact.css', true, '1.1', 'all');
 });

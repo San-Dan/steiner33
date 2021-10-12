@@ -1,60 +1,55 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<?php
 
-<head> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="<?php bloginfo('charset'); ?>">
+declare(strict_types=1);
 
-    <?php wp_head(); ?>
-</head>
+add_action('after_setup_theme', function () {
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
+    add_theme_support('menus');
+    add_theme_support('automatic-feed-links');
 
-<body class="loading" <?php body_class(); ?>>
-  <?php wp_body_open(); ?>
-    
-<?php $testMenu = get_menu('Menu'); ?>
+    add_theme_support('widgets');
 
-<header>
+    // Add support for editor styles.
+    add_theme_support('editor-styles');
 
-<?php if (has_custom_logo()) : ?>
-      <div class="site-logo"><?php the_custom_logo(); ?></div>
-    <?php else : ?>
-      <a class="navbar-brand" href="<?= site_url(); ?>"> <?php bloginfo('name'); ?></a>
-    <?php endif; ?>
+    // Enqueue editor styles.
+    add_editor_style('editor.css');
 
-  <div class="ham" type="menu">
-  <span class="bar1"></span>  
-    <span class="bar2"></span>  
-    <span class="bar3"></span>  
-    </div>
+    add_theme_support(
+        'custom-logo',
+        array(
+            'height'      => 150,
+            'width'       => 300,
+            'flex-width'  => true,
+            'flex-height' => true,
+        )
+    );
+});
 
-    
-    <nav class="navbar-nav">
-      <ul class="navbar">
-        <?php $currentPageId = $wp_query->queried_object_id;
-        foreach ($testMenu as $item) : ?>
-          <li class="nav-item">
-            <a class="nav-link<?= $item->object_id == $currentPageId ? ' active' : '' ?>" href="<?= $item->url; ?>">
-              <?= $item->title; ?>
-            </a>
-            <?php if ($item->children > 0) : ?>
-              <ul class="navbar">
-                <?php foreach ($item->children as $childItem) : ?>
-                  <li class="nav-item">
-                    <a class="nav-link<?= $childItem->object_id == $currentPageId ? ' active' : '' ?>" href="<?= $childItem->url; ?>">
-                      <?= $childItem->title; ?>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            <?php endif; ?>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    </nav>
+ function get_menu(string $location)
+ {
+     $menu = [];
+     $items = wp_get_nav_menu_items($location) ?: [];
 
+    foreach ($items as $item) {
+         $parentId = (int) $item->menu_item_parent;
 
-</header>
-<main>
+       if ($parentId === 0) {
+            $item->children = [];
+            $menu[$item->ID] = $item;
+
+            continue;
+        }
+
+        $menu[$parentId]->children[] = $item;
+    }
+
+    return $menu;
+}
+
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', true, '1.1', 'all');
+    wp_enqueue_script('main', get_template_directory_uri() . '/main.js', '', '', true);
+});

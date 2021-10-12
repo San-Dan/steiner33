@@ -14,16 +14,12 @@
       color: white;
       background-color: var(--green-primary);
     }
-
-
     Menyns färger:
     - Länkar default: green bg color 80% , Hover/Klick och underkategorier: 100% 
-
     Buttons
     - Background default: yellow btn bg
     - Pressed: --yellow-btn-pressed
     - Text: green-primary
-
     Lägga green-primary som bodys background color??
 */
 

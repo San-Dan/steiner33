@@ -6,7 +6,20 @@
  */
 
 .wp-block-create-block-hero {
-	background-color: #21759b;
+	width: 80%;
 	color: #fff;
-	padding: 2px;
+	padding: 20px;
 }
+
+.cover-image {
+	width: 300px;
+}
+
+.content-image {
+	width: 200px;
+}
+
+.hero-images {
+	display: flex;
+}
+

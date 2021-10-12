@@ -21,6 +21,12 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
 function create_block_hero_block_init() {
-	register_block_type( __DIR__ );
+	wp_register_script('hero-block.js', get_template_directory_uri() . '../../../plugins/hero/build/index.js', array('wp-blocks', 'wp-editor'));
+    wp_register_style('hero-index-css', get_template_directory_uri() . '../../../plugins/hero/build/index.css', array() );
+
+	register_block_type("create-block/hero", array(
+		'editor_script' => 'hero-block.js',
+		'style' => 'hero-index-css'
+	));
 }
 add_action( 'init', 'create_block_hero_block_init' );

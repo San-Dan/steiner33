@@ -36,7 +36,8 @@
     font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
-    margin:0px;
+    margin: 0px;
+    background-color: var(--white-bg-color);
 }
 
 .alumnis-heading {
@@ -46,6 +47,31 @@
 }
 
 .alumni-years {
-margin-top: -5px;
-margin-bottom: 10px;
+    margin-top: -4px !important;
+    margin-bottom: 10px !important;
+}
+
+/* ABOUT PAGE */
+.about-top {
+    font-family: "Chillax" !important;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0px;
+    color: var(--white-bg-color);
+}
+
+.about-heading {
+    font-family: "Calluna" !important;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.values-section p {
+    font-family: "Chillax" !important;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0px;
+    color: var(--black);
+    background-color: var(--white-bg-color);
+    line-height: 25px;
 }

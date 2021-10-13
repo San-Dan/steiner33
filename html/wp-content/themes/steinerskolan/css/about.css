@@ -25,8 +25,8 @@
     font-display: swap;
 }
 
-.about-top {
-    font-family: "Chillax";
+/* .about-top {
+    font-family: "Chillax" !important;
     font-style: normal;
     font-weight: normal;
     margin: 0px;
@@ -34,15 +34,16 @@
 }
 
 .about-heading {
-    font-family: "Calluna";
+    font-family: "Calluna" !important;
     font-style: normal;
     font-weight: normal;
 }
 
 .values-section {
-    font-family: "Chillax";
+    font-family: "Chillax" !important;
     font-style: normal;
     font-weight: normal;
     margin: 0px;
     color: var(--black);
-}
+    background-color: var(--white-bg-color);
+} */

@@ -31,7 +31,7 @@ body {
     background-color: var(--green-primary);
     width: 100vw;
     overflow-x: hidden;
-    margin-top: 12vh;
+    margin-top: 10vh;
 }
 
 @font-face {

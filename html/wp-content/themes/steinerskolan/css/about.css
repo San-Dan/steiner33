@@ -25,7 +25,8 @@
     font-display: swap;
 }
 
-/* .about-top {
+/* ABOUT PAGE */
+.about-top {
     font-family: "Chillax" !important;
     font-style: normal;
     font-weight: normal;
@@ -39,11 +40,12 @@
     font-weight: normal;
 }
 
-.values-section {
+.values-section p {
     font-family: "Chillax" !important;
     font-style: normal;
     font-weight: normal;
     margin: 0px;
     color: var(--black);
     background-color: var(--white-bg-color);
-} */
+    line-height: 25px;
+}

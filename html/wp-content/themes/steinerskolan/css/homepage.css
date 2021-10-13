@@ -54,7 +54,6 @@
     }
 }
 
-
 .alumnis-heading {
     font-family: "Calluna";
     font-style: normal;
@@ -66,27 +65,13 @@
     margin-bottom: 10px !important;
 }
 
-/* ABOUT PAGE */
-.about-top {
-    font-family: "Chillax" !important;
-    font-style: normal;
-    font-weight: normal;
-    margin: 0px;
-    color: var(--white-bg-color);
-}
-
-.about-heading {
-    font-family: "Calluna" !important;
-    font-style: normal;
-    font-weight: normal;
-}
-
-.values-section p {
-    font-family: "Chillax" !important;
-    font-style: normal;
-    font-weight: normal;
-    margin: 0px;
-    color: var(--black);
-    background-color: var(--white-bg-color);
+.alumni-quote {
     line-height: 25px;
+}
+
+.homepage-heading {
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: normal;
+    color: var(--white-bg-color);
 }

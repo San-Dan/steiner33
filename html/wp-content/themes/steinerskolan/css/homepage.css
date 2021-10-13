@@ -25,12 +25,27 @@
     font-display: swap;
 }
 
-.pink-heading {
-    margin-top: 50px;
+.hero {
+    margin: 0px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
 }
 
 .alumnis {
     font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
+    margin:0px;
+}
+
+.alumnis-heading {
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.alumni-years {
+margin-top: -5px;
+margin-bottom: 10px;
 }

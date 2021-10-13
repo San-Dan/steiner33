@@ -29,4 +29,20 @@
     font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
+    margin: 0px;
+    color: var(--white-bg-color);
+}
+
+.about-heading {
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.values-section {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    margin: 0px;
+    color: var(--black);
 }

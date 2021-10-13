@@ -27,7 +27,7 @@
 
 /* ABOUT PAGE */
 .about-top {
-    font-family: "Chillax" !important;
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     margin: 0px;
@@ -40,8 +40,8 @@
     font-weight: normal;
 }
 
-.values-section p {
-    font-family: "Chillax" !important;
+.values-section {
+    font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
     margin: 0px;

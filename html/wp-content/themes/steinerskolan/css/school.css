@@ -27,14 +27,18 @@
 
 /* Testing FONTS on box */
 .skolkokBox {
-    font-family: "Chillax";
-    font-style: normal;
-    font-weight: normal;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .skolkokBox .heading {    
     font-family: "Calluna";
     font-style: normal;
     font-weight: bold;
+}
+.skolkokBoxText {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
 }
 @media only screen and (max-width: 768px) {
     .skolkokBox {

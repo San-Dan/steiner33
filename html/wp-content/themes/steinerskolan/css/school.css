@@ -31,13 +31,36 @@
     font-style: normal;
     font-weight: normal;
 }
+.skolkokBox .heading {    
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    .skolkokBox {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
 .kalendariumBox {
     font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
 }
+.kalendariumBox .heading {    
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
+}
+
 .arshjulBox {
     font-family: "Chillax";
     font-style: normal;
     font-weight: normal;
+}
+.arshjulBox .heading {    
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: bold;
 }

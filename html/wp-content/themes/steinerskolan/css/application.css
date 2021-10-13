@@ -28,7 +28,7 @@
 /*** anmalan ***/
 .anmalanBox {   
     max-width: 380px;
-    max-height: 550px;
+    max-height: 700px;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
@@ -41,8 +41,8 @@
     line-height: 28px;
     color: var(--white-bg-color);    
 }
-.anmalanBox .heading {
-    top: -20px;
+.anmalanBox .heading {    
+    margin-top: 80px;
     margin-bottom: 20px;
     font-family: "Calluna";
     font-style: normal;
@@ -64,24 +64,18 @@
     line-height: 26px;
     color: #f2f7f5;
 }
-.ansökbtn.is-style-fill {    
-    padding: 0px;
+.ansökbtn.is-style-fill {   
     max-height: 64px;
     max-width: 161px;
-    border: none;
-    max-height: 64px;
-    margin-left: 150px;
-    top: 680px;
-    background: #faae2b;
-    margin-top: 0px;
+    border: none;  
+    background: #faae2b;    
     margin-bottom: 80px;
     box-shadow: 0px 20px 80px rgba(0, 71, 62, 0.09),
         0px 7.7037px 25.4815px rgba(0, 71, 62, 0.0546667),
         0px 1.62963px 6.51852px rgba(0, 71, 62, 0.0353333);
     border-radius: 8px;
     padding-bottom: 4px;
-    padding-top: 10px;
-    padding-left: 0px;
+    padding-top: 10px;   
     padding-right: 0px;
     font-family: "Chillax";
     font-style: normal;

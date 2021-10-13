@@ -72,10 +72,9 @@
 }
 .kontaktaOss {    
     width: 100%;   
-    max-height: 1000px;
+    max-height: 2000px;
     margin-left: 16px;    
-    margin-bottom: 50px;
-    padding-top: 0px;
+    margin-bottom: 50px;    
 }
 .kontaktHeadingTwo {
     width: 263px;
@@ -89,7 +88,7 @@
     line-height: 48px;
     color: #f2f7f5;
     margin-bottom: 16px;
-    margin-top: 1500px; 
+    margin-top: 900px; 
 }
 .kontaktaOss h3 {
     font-family: "Calluna";

@@ -40,11 +40,19 @@
     background-color: var(--white-bg-color);
 }
 
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .alumni-img {
-        max-height: 500px;
+        max-height: 200px;
+        max-width: 100px;
     }
-} */
+}
+
+@media screen and (min-width: 401px) {
+    .alumni-img {
+        max-height: 700px;
+        max-width: 650px;
+    }
+}
 
 
 .alumnis-heading {

@@ -136,8 +136,10 @@
         margin-top: 30px;
         margin-bottom: 50px;        
     }
-    h2.kontaktHeadingTwo {
+    .kontaktHeadingTwo {
+       width: 402px;
        margin-top: 750px; 
+       font-size: 72px;
     }   
     .kontaktPTwo {       
         font-family: "Chillax";

@@ -40,6 +40,13 @@
     background-color: var(--white-bg-color);
 }
 
+@media screen and (max-width: 400px) {
+    .alumni-img {
+        max-height: 500px;
+    }
+}
+
+
 .alumnis-heading {
     font-family: "Calluna";
     font-style: normal;

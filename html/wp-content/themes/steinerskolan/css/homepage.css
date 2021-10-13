@@ -25,6 +25,21 @@
     font-display: swap;
 }
 
+.home-blocks {
+    margin: 0px;
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: normal;
+    color: var(--white-bg-color);
+}
+
+.homepage-heading {
+    font-family: "Calluna";
+    font-style: normal;
+    font-weight: normal;
+    color: var(--white-bg-color);
+}
+
 .hero {
     margin: 0px;
     font-family: "Chillax";
@@ -69,9 +84,4 @@
     line-height: 25px;
 }
 
-.homepage-heading {
-    font-family: "Calluna";
-    font-style: normal;
-    font-weight: normal;
-    color: var(--white-bg-color);
-}
+

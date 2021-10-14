@@ -60,7 +60,7 @@
 
     .wp-block-media-text__media img {
         height: auto;
-        width: 100px;
+        /* width: 100px; */
         overflow-y: hidden;
     }
     /* .wp-image-244.size-full {

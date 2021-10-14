@@ -48,9 +48,36 @@
     background-color: var(--white-bg-color);
 }
 
+.wp-block-cover {
+    overflow-y: hidden;
+}
+
+.wp-block-cover__img.wp-block-cover__image-background {
+    height: 100% !important;
+    left: -200px;
+    width: 160%;
+    top: -50px;
+}
 .hero-text {
-    max-width: 100px;
-    /* margin-left: 50px; */
+    max-width: 200px;
+    margin-left: 100px;
+    max-height: 160px;
+}
+
+@media screen and (min-width: 415px) {
+    .wp-block-cover__img.wp-block-cover__image-background {
+        top: 0px;
+        left: -20px;
+        width: 100%;
+    }
+
+    .hero-text {
+        max-width: 200px;
+        /* margin-left: 600px; */
+        margin-left: 80%;
+        max-height: 160px;
+        font-size: 24px;
+    }
 }
 
 .alumnis {
@@ -69,12 +96,10 @@
         /* width: 100px; */
         overflow-y: hidden;
     }
-    /* .wp-image-244.size-full {
-        width: 70%;
-        height: 100%;
-    } */
-    .wp-block-cover img {
+    .wp-block-cover__image-background.wp-image-433 {
         position: absolute;
+        left: -200px;
+        width: 160%;
     }
 }
 

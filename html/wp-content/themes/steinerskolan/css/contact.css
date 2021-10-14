@@ -115,7 +115,7 @@
         width: 50%;
         height: 87.9vh;
         left: 50%;
-        top: 90px;
+        top: 100px;
     }
     .map iframe {
         padding-right: 44px;
@@ -125,7 +125,7 @@
     .hittaHit {       
         width: 50%;
         padding-left: 141px;
-        top: 90px;
+        top: 100px;
         background: #f2f7f5;
         height: 88vh;
     }   

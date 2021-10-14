@@ -106,7 +106,7 @@
         height: 72px;
         width: 415px;
         top: -40px;
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .ansökbtn.is-style-fill {
         margin-left: 665px;        

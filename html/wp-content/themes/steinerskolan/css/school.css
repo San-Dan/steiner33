@@ -63,3 +63,14 @@
     font-style: normal;
     font-weight: bold;
 }
+
+.arshjul-img {
+    width: 600px;
+    height: auto;
+}
+@media only screen and (max-width: 768px) {
+    .arshjul-img {
+        width: 400px;
+        height: auto;
+    }
+}

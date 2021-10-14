@@ -54,9 +54,9 @@
 
 .wp-block-cover__img.wp-block-cover__image-background {
     height: 100% !important;
-    left: -200px;
-    width: 160%;
-    top: -50px;
+    left: -200px !important;
+    width: 160% !important;
+    top: -50px !important;
 }
 .hero-text {
     max-width: 200px;
@@ -65,18 +65,21 @@
 }
 
 @media screen and (min-width: 415px) {
-    .wp-block-cover__img.wp-block-cover__image-background {
-        top: 0px;
-        left: -20px;
-        width: 100%;
-    }
 
+    .wp-block-cover {
+        min-height: 90vh !important;
+    }
+    .wp-block-cover__img.wp-block-cover__image-background {
+        top: -40px !important;
+        /* left: -20px !important; */
+        width: 100% !important;
+    }
     .hero-text {
         max-width: 200px;
         /* margin-left: 600px; */
         margin-left: 80%;
         max-height: 160px;
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
